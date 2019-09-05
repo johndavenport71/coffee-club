@@ -8,7 +8,7 @@ $id = $_GET['id'] ?? '1'; // PHP > 7.0
 <?php $page_title = 'Show Subject'; ?>
 <?php include(SHARED_PATH . '/header.php'); ?>
 
-<div id="content">
+<main>
 
   <a class="back-link" href="<?php echo url_for('/members/index.php'); ?>">&laquo; Back to List</a>
 
@@ -18,4 +18,4 @@ $id = $_GET['id'] ?? '1'; // PHP > 7.0
 
   </div>
 
-</div>
+</main>

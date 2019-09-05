@@ -12,13 +12,15 @@
   </head>
 
   <body>
-    <header>
-      <h1>Coffee Club</h1>
-      <img src="<?php echo url_for('/images/hero-img.jpg'); ?>" width=1200px height=500px alt="Coffee beans">
+    <header class="main-header">
+        <nav>
+            <a href="index.php">Home</a>
+            <div class="login">
+                <a href="">Sign Up</a>
+                <a href="<?php echo url_for('/members/index.php'); ?>">Login</a>
+            </div>
+        </nav>
+        <h1>Coffee Club</h1>
+        <p>Your neighborhood coffee supplier</p>
+        <a href="" class="cta">Sign Up!</a>
     </header>
-
-    <nav>
-      <ul>
-        <li><a href="<?php echo url_for('/members/index.php'); ?>">Home</a></li>
-      </ul>
-    </nav>

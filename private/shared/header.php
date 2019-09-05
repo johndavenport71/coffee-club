@@ -2,7 +2,7 @@
   if(!isset($page_title)) { $page_title = 'Coffee Club'; }
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
@@ -11,13 +11,14 @@
     <link rel="stylesheet" media="all" href="<?php echo url_for('/stylesheets/coffee-club.css'); ?>" />
   </head>
 
-  <body>
-    <header>
-      <h1>Coffee Club</h1>
+  <body>      
+    <header class="member-header">
+      <h1><a href="<?php echo url_for('index.php'); ?>">Coffee Club</a></h1>
+      <nav>
+        <a href="index.php">Home</a>
+        <div class="login">
+          <a href="">Sign Up</a>
+          <a href="<?php echo url_for('/members/index.php'); ?>">Login</a>
+        </div>
+      </nav>
     </header>
-
-    <nav>
-      <ul>
-        <li><a href="<?php echo url_for('/members/index.php'); ?>">Home</a></li>
-      </ul>
-    </nav>

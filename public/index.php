@@ -4,7 +4,25 @@
 ?>
 
 <main>
-    <a href="members/index.php">Go forward</a>
+  <div class="flex">
+    <div class="tile">
+      <h2>Coffee Beans</h2>
+      <p>We sell coffee beans and you can buy them!</p>
+      <p>Light, medium, or dark roast, we even sell espresso beans.</p>
+      <img src="images/tile-1.jpg" alt="Coffee beans in a burlap bag" width=250px height=200px>
+    </div>
+    <div class="tile">
+      <h2>Special Deals</h2>
+      <p>We offer weekly specials and seasonal items that are not available year round.</p>
+      <p><a href="">Log in</a> to view or deals.</p>
+      <img src="images/tile-2.jpg" alt="Three mugs of coffee held together" width=250px height=200px>
+    </div>
+    <div class="tile">
+      <h2>Locally Owned</h2>
+      <p>We are locally owned and operated and source our beans from local farms.</p>
+      <img src="images/tile-3.jpg" alt="A customer ordering at a coffee shop" width=250px height=200px>
+    </div>
+  </div>
 </main>
 
 <?php include(SHARED_PATH . '/footer.php'); ?>

@@ -12,7 +12,7 @@
 <?php $page_title = 'Members Area - Coffee Club'; ?>
 <?php include(SHARED_PATH . '/header.php'); ?>
 
-<div id="content">
+<main>
   <div class="members listing">
     <h1>Members</h1>
 
@@ -46,6 +46,6 @@
 
   </div>
 
-</div>
+</main>
 
 <?php include(SHARED_PATH . '/footer.php'); ?>
