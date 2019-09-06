@@ -29,15 +29,19 @@ h3 {
 }
 
 /************Main Header Styles*************/
+header {
+  border-top: 5px solid #11826D;
+}
+
 .main-header {
   background: url(../images/hero-img.jpg) center/cover no-repeat;
-  min-height: 500px;
+  min-height: 600px;
 }
 
 .main-header h1,
 .main-header p {
   color: #fff8f6;
-  margin: 1rem auto;
+  margin: 2rem auto;
   text-align: center;
   text-shadow: 0 0 10px #25120b;
   width: 35%;
@@ -49,10 +53,11 @@ h3 {
 
 .main-header p {
   font: 2rem 'Satisfy', cursive;
+  margin-bottom: 4rem;
 }
 
 .cta {
-  background-color: #6AC78B;
+  background-color: #11826D;
   border-radius: 5px;
   box-shadow: 0 3px 5px #25120b;
   display: block;
@@ -61,7 +66,7 @@ h3 {
   margin: 1rem auto;
   padding: 1.2rem;
   text-decoration: none;
-  text-shadow: 0 0 5px #25120b;
+  text-shadow: 0 0 3px #25120b;
   width: 120px;
 }
 
@@ -71,10 +76,10 @@ h3 {
 }
 
 .member-header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   position: absolute;
-  right: 50%;
-  top: -20%;
+  right: 45%;
+  top: -25%;
 }
 
 .member-header h1 a {
@@ -86,8 +91,8 @@ h3 {
 /************Navigation*************/
 nav {
   background-color: rgba(250, 242, 240, 0.7);
-  box-shadow: 0 5px 5px #25120b;
-  padding: 1rem 2rem;
+  box-shadow: 0 3px 5px #25120b;
+  padding: 1.5rem 3rem;
 }
 
 nav a {
@@ -97,17 +102,32 @@ nav a {
 }
 
 nav .login {
-  display: inline-block;
   float: right;
+  margin-top: -10px;
 }
 
 .login a {
-  padding: 0 1rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #0D0000;
+  display: inline-block;
+  margin: 0 1rem;
+  padding: .5rem 1rem;
+  text-align: center;
+  width: 115px;
+}
+
+.login a:first-of-type {
+  background-color: #11826D;
+  color: #fff8f6;
+}
+
+.login a:last-of-type {
+  border: 1px solid #25120b;
 }
 
 /************Main Content*************/
 main {
-  background-color: #fff8f6;
+  background-color: #fff;
   margin: 0 auto;
   padding: 1rem;
   width: 80%;
@@ -124,18 +144,54 @@ main {
   border-radius: 5px;
   box-shadow: 0 3px 5px #25120b;
   flex: 1;
+  padding: 0 .5rem;
   margin: .5rem;
   min-height: 300px;
   text-align: center;
 }
 
 .tile h2 {
+  color: #11826D;
+  font-size: 2.2rem;
+}
+
+.tile p {
+  line-height: 1.5rem;
+  color: #302825;
+}
+
+.tile a {
+  color: #11826D;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tile img {
+  box-shadow: 0 0 3px #25120b;
+  margin: 1rem auto;
+}
+
+.members h2 {
   font-size: 2rem;
+}
+
+.members .add {
+  background-color: #11826D;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px #25120b;
+  color: #fff8f6;
+  padding: .5rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 /************Table Styles*************/
 table {
   border-collapse: collapse;
+  margin-top: 1.5rem;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
 }
 
 th,
@@ -144,9 +200,11 @@ td {
 }
 
 td a {
-  background-color: #0D0000;
+  background-color: #11826D;
   border-radius: 5px;
+  box-shadow: 0 1px 5px #25120b;
   color: #fff8f6;
+  margin: auto 1rem;
   padding: 5px;
   text-decoration: none;
 }
@@ -157,7 +215,7 @@ th {
 }
 
 tr:nth-of-type(even) {
-  background-color: #f0c6bc;
+  background-color: #f8e3de;
 }
 
 /************Footer*************/
@@ -167,6 +225,6 @@ footer {
 }
 
 footer a {
-  color: #6AC78B;
+  color: #46D4BA;
   text-decoration: none;
 }

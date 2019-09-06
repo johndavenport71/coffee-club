@@ -14,12 +14,13 @@
     <div class="tile">
       <h2>Special Deals</h2>
       <p>We offer weekly specials and seasonal items that are not available year round.</p>
-      <p><a href="">Log in</a> to view or deals.</p>
+      <p>Visit us in person or <a href="<?php echo url_for('/members/index.php'); ?>">Log in</a> to view our deals.</p>
       <img src="images/tile-2.jpg" alt="Three mugs of coffee held together" width=250px height=200px>
     </div>
     <div class="tile">
       <h2>Locally Owned</h2>
-      <p>We are locally owned and operated and source our beans from local farms.</p>
+      <p>We are locally owned and source our beans from local farms.</p>
+      <p>Contact us for partnership opportunities.</p>
       <img src="images/tile-3.jpg" alt="A customer ordering at a coffee shop" width=250px height=200px>
     </div>
   </div>

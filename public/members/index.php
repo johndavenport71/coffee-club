@@ -13,22 +13,16 @@
 <?php include(SHARED_PATH . '/header.php'); ?>
 
 <main>
-  <div class="members listing">
-    <h1>Members</h1>
-
-    <div class="actions">
-      <a class="action" href="">Add new member</a>
-    </div>
-
+  <div class="members">
+    <h2>Members</h2>
+    <a class="add" href="">Add new member</a>
   	<table class="list">
   	  <tr>
         <th>ID</th>
         <th>First Name</th>
         <th>Last Name</th>
   	    <th>Email</th>
-  	    <th>&nbsp;</th>
-  	    <th>&nbsp;</th>
-        <th>&nbsp;</th>
+  	    <th colspan="3">Manage</th>
   	  </tr>
 
       <?php foreach($members as $member) { ?>
@@ -37,9 +31,11 @@
           <td><?php echo h($member['firstName']); ?></td>
           <td><?php echo $member['lastName'] == 1 ? 'true' : 'false'; ?></td>
     	    <td><?php echo h($member['email']); ?></td>
-          <td><a class="action" href="<?php echo url_for('members/show.php?id=' . h(u($member['id']))); ?>">View</a></td>
-          <td><a class="action" href="">Edit</a></td>
-          <td><a class="action" href="">Delete</a></td>
+          <td colspan="3">
+            <a href="<?php echo url_for('members/show.php?id=' . h(u($member['id']))); ?>">View</a>
+            <a href="">Edit</a>
+            <a href="">Delete</a>
+          </td>
     	  </tr>
       <?php } ?>
   	</table>

@@ -8,7 +8,9 @@
   <head>
     <title><?php echo h($page_title); ?></title>
     <meta charset="utf-8">
-    <link rel="stylesheet" media="all" href="<?php echo url_for('/stylesheets/coffee-club.css'); ?>" />
+    <link rel="stylesheet" href="<?php echo url_for('/stylesheets/coffee-club.css'); ?>">
+    <link rel="prefetch" href="private/shared/initialize.php">
+    <link rel="prefetch" href="private/shared/functions.php">
   </head>
 
   <body>
