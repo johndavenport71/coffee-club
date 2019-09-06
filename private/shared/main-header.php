@@ -18,11 +18,11 @@
         <nav>
             <a href="index.php">Home</a>
             <div class="login">
-                <a href="">Sign Up</a>
+                <a href="<?php echo url_for('/sign-up.php'); ?>">Sign Up</a>
                 <a href="<?php echo url_for('/members/index.php'); ?>">Login</a>
             </div>
         </nav>
         <h1>Coffee Club</h1>
         <p>Your neighborhood coffee supplier</p>
-        <a href="" class="cta">Sign Up!</a>
+        <a href="<?php echo url_for('/sign-up.php'); ?>" class="cta">Sign Up!</a>
     </header>

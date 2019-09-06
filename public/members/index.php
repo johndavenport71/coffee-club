@@ -29,7 +29,7 @@
         <tr>
           <td><?php echo h($member['id']); ?></td>
           <td><?php echo h($member['firstName']); ?></td>
-          <td><?php echo $member['lastName'] == 1 ? 'true' : 'false'; ?></td>
+          <td><?php echo $member['lastName']; ?></td>
     	    <td><?php echo h($member['email']); ?></td>
           <td colspan="3">
             <a href="<?php echo url_for('members/show.php?id=' . h(u($member['id']))); ?>">View</a>

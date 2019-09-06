@@ -17,7 +17,7 @@
       <nav>
         <a href="index.php">Home</a>
         <div class="login">
-          <a href="">Sign Up</a>
+          <a href="<?php echo url_for('/sign-up.php'); ?>">Sign Up</a>
           <a href="<?php echo url_for('/members/index.php'); ?>">Login</a>
         </div>
       </nav>

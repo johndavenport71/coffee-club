@@ -11,7 +11,7 @@
 
 
 /************Simple Browser Reset*************/
-body {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -64,10 +64,9 @@ header {
   color: #fff8f6;
   font-size: 2rem;    
   margin: 1rem auto;
-  padding: 1.2rem;
+  padding: 1rem;
   text-decoration: none;
-  text-shadow: 0 0 3px #25120b;
-  width: 120px;
+  width: 150px;
 }
 
 /************Member Header Styles*************/
@@ -79,7 +78,7 @@ header {
   font-size: 2.5rem;
   position: absolute;
   right: 45%;
-  top: -25%;
+  top: 10%;
 }
 
 .member-header h1 a {
@@ -130,7 +129,7 @@ main {
   background-color: #fff;
   margin: 0 auto;
   padding: 1rem;
-  width: 80%;
+  width: 85%;
 }
 
 .flex {
@@ -145,6 +144,7 @@ main {
   box-shadow: 0 3px 5px #25120b;
   flex: 1;
   padding: 0 .5rem;
+  padding-bottom: 1rem;
   margin: .5rem;
   min-height: 300px;
   text-align: center;
@@ -152,12 +152,14 @@ main {
 
 .tile h2 {
   color: #11826D;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  margin: 1rem auto;
 }
 
 .tile p {
-  line-height: 1.5rem;
   color: #302825;
+  line-height: 1.5rem;
+  margin: .5rem auto;
 }
 
 .tile a {
@@ -172,7 +174,8 @@ main {
 }
 
 .members h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin: 1rem;
 }
 
 .members .add {
@@ -188,7 +191,7 @@ main {
 /************Table Styles*************/
 table {
   border-collapse: collapse;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   table-layout: fixed;
   text-align: center;
   width: 100%;
@@ -218,10 +221,61 @@ tr:nth-of-type(even) {
   background-color: #f8e3de;
 }
 
+/************Form Styles*************/
+.sign-up h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+form {
+  background-color: #fff8f6;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px #25120b;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  width: 50%;
+}
+
+form label {
+  display: block;
+  font-size: 1rem;
+}
+
+form input:not([type="submit"]) {
+  background-color: #f8e3de;
+  border: 1px solid #302825;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  min-height: 1.5rem;
+  padding: 0 .5rem;
+}
+
+form input:not([type="submit"]):focus {
+  border: 1px solid #11826D;
+}
+
+form input[type="submit"] {
+  background-color: #11826D;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px #25120b;
+  font-size: 1.2rem;
+  color: #fff8f6;
+  padding: .5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+
 /************Footer*************/
 footer {
   background-color: #0D0000;
   color: #fff8f6;
+  padding: 1rem;
+}
+
+footer p {
+  margin: .5rem;
 }
 
 footer a {
