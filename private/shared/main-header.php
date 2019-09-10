@@ -6,8 +6,10 @@
 
 <html lang="en">
   <head>
-    <title><?php echo h($page_title); ?></title>
     <meta charset="utf-8">
+    <title><?php echo h($page_title); ?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<?php echo url_for('/stylesheets/coffee-club.css'); ?>">
     <link rel="prefetch" href="private/shared/initialize.php">
     <link rel="prefetch" href="private/shared/functions.php">

@@ -31,6 +31,7 @@ h3 {
 /************Main Header Styles*************/
 header {
   border-top: 5px solid #11826D;
+  box-shadow: 0 2px 3px #302825;
 }
 
 .main-header {
@@ -126,7 +127,7 @@ nav .login {
 
 /************Main Content*************/
 main {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0);
   margin: 0 auto;
   padding: 1rem;
   width: 85%;
@@ -171,6 +172,21 @@ main {
 .tile img {
   box-shadow: 0 0 3px #25120b;
   margin: 1rem auto;
+}
+
+.large {
+  flex: none;
+  padding: 1rem;
+}
+
+.large h2 {
+  margin: 1.5rem;
+}
+
+.large .cta {
+  color: #fff8f6;
+  margin-top: 2rem;
+  width: 200px;
 }
 
 .members h2 {
@@ -282,3 +298,59 @@ footer a {
   color: #46D4BA;
   text-decoration: none;
 }
+/************Media Queries*************/
+/************768 width*************/
+@media screen and (max-width: 768px) {
+  .main-header h1,
+  .main-header p {
+    width: 75%;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .flex {
+    display: flex;
+    margin-top: -80px;
+    width: 100%;
+  }
+  
+  .tile {
+    background-color: #fff8f6;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px #25120b;
+    flex: 1;
+    padding: 0 .5rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    min-height: 300px;
+    text-align: center;
+  }
+  
+  .tile h2 {
+    color: #11826D;
+    font-size: 2.5rem;
+    margin: 1rem auto;
+  }
+  
+  .tile p {
+    color: #302825;
+    line-height: 1.5rem;
+    margin: .5rem auto;
+  }
+  
+  .tile a {
+    color: #11826D;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .tile img {
+    box-shadow: 0 0 3px #25120b;
+    margin: 1rem auto;
+  }
+  
+}
+
+/************360 width*************/
