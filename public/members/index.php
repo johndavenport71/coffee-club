@@ -1,16 +1,17 @@
-<?php require_once('../../private/initialize.php'); ?>
+<?php 
+  require_once('../../private/initialize.php'); 
 
-<?php
   $members = [
     ['id' => '1', 'firstName' => 'Sarah', 'lastName' => 'Perkins', 'email' => 'sarahn@email.com'],
     ['id' => '2', 'firstName' => 'Bill', 'lastName' => 'Perkins', 'email' => 'billn@email.com'],
     ['id' => '3', 'firstName' => 'Daphne', 'lastName' => 'Cooper', 'email' => 'daphnec@email.com'],
-    ['id' => '4', 'firstName' => 'Francis', 'lastName' => 'Moore', 'email' => 'francism@email.com']
+    ['id' => '4', 'firstName' => 'Sean', 'lastName' => 'Bean', 'email' => 'boromir@email.com'],
+    ['id' => '5', 'firstName' => 'Francis', 'lastName' => 'Moore', 'email' => 'francism@email.com']
   ];
-?>
 
-<?php $page_title = 'Members Area - Coffee Club'; ?>
-<?php include(SHARED_PATH . '/header.php'); ?>
+  $page_title = 'Members Area - Coffee Club';
+  include(SHARED_PATH . '/header.php'); 
+?>
 
 <main>
   <div class="members">
@@ -27,12 +28,12 @@
 
       <?php foreach($members as $member) { ?>
         <tr>
-          <td><?php echo h($member['id']); ?></td>
-          <td><?php echo h($member['firstName']); ?></td>
-          <td><?php echo $member['lastName']; ?></td>
-    	    <td><?php echo h($member['email']); ?></td>
+          <td><?= h($member['id']); ?></td>
+          <td><?= h($member['firstName']); ?></td>
+          <td><?= $member['lastName']; ?></td>
+    	    <td><?= h($member['email']); ?></td>
           <td colspan="3">
-            <a href="<?php echo url_for('members/show.php?id=' . h(u($member['id']))); ?>">View</a>
+            <a href="<?= url_for('members/show.php?id=' . h(u($member['id']))); ?>">View</a>
             <a href="">Edit</a>
             <a href="">Delete</a>
           </td>

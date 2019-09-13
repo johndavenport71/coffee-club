@@ -1,20 +1,17 @@
-<?php require_once('../../private/initialize.php'); ?>
-
-<?php
-// $id = isset($_GET['id']) ? $_GET['id'] : '1';
-$id = $_GET['id'] ?? '1'; // PHP > 7.0
+<?php 
+  require_once('../../private/initialize.php'); 
+  $id = $_GET['id'] ?? '1'; // PHP > 7.0
+  $page_title = 'Show Subject'; 
+  include(SHARED_PATH . '/header.php'); 
 ?>
-
-<?php $page_title = 'Show Subject'; ?>
-<?php include(SHARED_PATH . '/header.php'); ?>
 
 <main>
 
-  <a class="back-link" href="<?php echo url_for('/members/index.php'); ?>">&laquo; Back to List</a>
+  <a class="back-link" href="<?= url_for('/members/index.php'); ?>">&laquo; Back to List</a>
 
   <div class="subject show">
 
-    Subject ID: <?php echo h($id); ?>
+    Subject ID: <?= h($id); ?>
 
   </div>
 

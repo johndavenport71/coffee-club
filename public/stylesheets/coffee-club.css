@@ -70,6 +70,11 @@ header {
   width: 150px;
 }
 
+.cta:hover {
+  background-color: #E5FFF9;
+  color: #11826D;
+}
+
 /************Member Header Styles*************/
 .member-header {
   position: relative;
@@ -121,8 +126,17 @@ nav .login {
   color: #fff8f6;
 }
 
+.login a:first-of-type:hover {
+  background-color: #E5FFF9;
+  color: #11826D;
+}
+
 .login a:last-of-type {
   border: 1px solid #25120b;
+}
+
+a:hover {
+  color: #11826D;
 }
 
 /************Main Content*************/
@@ -189,6 +203,11 @@ main {
   width: 200px;
 }
 
+.large .cta:hover {
+  background-color: #E5FFF9;
+  color: #11826D;
+}
+
 .members h2 {
   font-size: 2.5rem;
   margin: 1rem;
@@ -202,6 +221,11 @@ main {
   padding: .5rem;
   text-align: center;
   text-decoration: none;
+}
+
+.members .add:hover {
+  background-color: #E5FFF9;
+  color: #11826D;
 }
 
 /************Table Styles*************/
@@ -226,6 +250,11 @@ td a {
   margin: auto 1rem;
   padding: 5px;
   text-decoration: none;
+}
+
+td a:hover {
+  background-color: #E5FFF9;
+  color: #11826D;
 }
 
 th {
@@ -280,6 +309,12 @@ form input[type="submit"] {
   padding: .5rem;
   text-align: center;
   text-decoration: none;
+}
+
+form input[type="submit"]:hover {
+  background-color: #E5FFF9;
+  color: #11826D;
+  cursor: pointer;
 }
 
 

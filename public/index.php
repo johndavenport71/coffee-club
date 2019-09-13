@@ -14,7 +14,7 @@
     <div class="tile">
       <h2>Special Deals</h2>
       <p>We offer weekly specials and seasonal items that are not available year round.</p>
-      <p>Visit us in person or <a href="<?php echo url_for('/members/index.php'); ?>">Log in</a> to view our deals.</p>
+      <p>Visit us in person or <a href="<?= url_for('/members/index.php'); ?>">Log in</a> to view our deals.</p>
       <img src="images/tile-2.jpg" alt="Three mugs of coffee held together" width=250px height=200px>
     </div>
     <div class="tile">
@@ -27,7 +27,7 @@
   <div class="tile large">
     <h2>Sign Up Now and Start Ordering</h2>
     <p>Experience our excellent customer service and world class products!</p>
-    <a href="<?php echo url_for('/sign-up.php'); ?>" class="cta">Sign Up!</a>
+    <a href="<?= url_for('/sign-up.php'); ?>" class="cta">Sign Up!</a>
   </div>
 </main>
 

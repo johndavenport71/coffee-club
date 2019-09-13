@@ -7,20 +7,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><?php echo h($page_title); ?></title>
+    <title><?= h($page_title); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" media="all" href="<?php echo url_for('/stylesheets/coffee-club.css'); ?>" />
+    <link rel="prefetch" href="/public/stylesheets/coffee-club.css">
+    <link rel="stylesheet" href="<?= url_for('/stylesheets/coffee-club.css'); ?>">
+    <link rel="stylesheet" media="all" href="<?= url_for('/stylesheets/coffee-club.css'); ?>" />
   </head>
 
   <body>      
     <header class="member-header">
-      <h1><a href="<?php echo url_for('index.php'); ?>">Coffee Club</a></h1>
+      <h1><a href="<?= url_for('index.php'); ?>">Coffee Club</a></h1>
       <nav>
-        <a href="index.php">Home</a>
+        <a href="<?= url_for('index.php') ?>">Home</a>
         <div class="login">
-          <a href="<?php echo url_for('/sign-up.php'); ?>">Sign Up</a>
-          <a href="<?php echo url_for('/members/index.php'); ?>">Login</a>
+          <a href="<?= url_for('/sign-up.php'); ?>">Sign Up</a>
+          <a href="<?= url_for('/members/index.php'); ?>">Login</a>
         </div>
       </nav>
     </header>
