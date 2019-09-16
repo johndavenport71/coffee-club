@@ -10,9 +10,8 @@
     <title><?= h($page_title); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="prefetch" href="/public/stylesheets/coffee-club.css">
+    <link rel="preload" href="/public/stylesheets/coffee-club.css">
     <link rel="stylesheet" href="<?= url_for('/stylesheets/coffee-club.css'); ?>">
-    <link rel="stylesheet" media="all" href="<?= url_for('/stylesheets/coffee-club.css'); ?>" />
   </head>
 
   <body>      

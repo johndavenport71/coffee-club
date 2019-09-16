@@ -1,5 +1,5 @@
 <?php
-  if(!isset($page_title)) { $page_title = 'Coffee Club'; }
+  if(!isset($page_title)) { $page_title = 'Home - Coffee Club'; }
 ?>
 
 <!doctype html>
@@ -10,14 +10,14 @@
     <title><?= h($page_title); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="prefetch" href="/public/stylesheets/coffee-club.css">
-    <link rel="prefetch" href="https://fonts.googleapis.com/css?family=Roboto|Satisfy&display=swap">
-    <link rel="prefetch" href="/public/images/hero-img.jpg">
-    <link rel="prefetch" href="/public/images/tile-1.jpg">
-    <link rel="prefetch" href="/public/images/tile-2.jpg">
-    <link rel="prefetch" href="/public/images/tile-3.jpg">
-    <link rel="prefetch" href="private/shared/initialize.php">
-    <link rel="prefetch" href="private/shared/functions.php">
+    <link rel="preload" href="/public/stylesheets/coffee-club.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto|Satisfy&display=swap">
+    <link rel="preload" href="/public/images/hero-img.jpg">
+    <link rel="preload" href="/public/images/tile-1.jpg">
+    <link rel="preload" href="/public/images/tile-2.jpg">
+    <link rel="preload" href="/public/images/tile-3.jpg">
+    <link rel="preload" href="private/shared/initialize.php">
+    <link rel="preload" href="private/shared/functions.php">
     <link rel="stylesheet" href="<?= url_for('/stylesheets/coffee-club.css'); ?>">
   </head>
 
