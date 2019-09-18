@@ -20,4 +20,14 @@ function h($string="") {
   return htmlspecialchars($string);
 }
 
+function error404() {
+  header($_SERVER["SERVER_PROTOCOL"] . " 404 Page Not Found"); 
+  include(PUBLIC_PATH . '/errors/404-error.php');
+}
+
+function error500() {
+  header($_SERVER["SERVER_PROTOCOL"] . " 500 Internal Server Error"); 
+  include(PUBLIC_PATH . '/errors/500-error.php');
+}
+
 ?>

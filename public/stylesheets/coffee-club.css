@@ -333,6 +333,27 @@ footer a {
   color: #46D4BA;
   text-decoration: none;
 }
+
+
+/************ Error Pages ************/
+.error {
+  font-size: 1.5rem;
+  margin: 2rem auto;
+  padding: 0;
+  text-align: center;
+  width: 50%;
+}
+
+.error p {
+  padding: 1rem;
+}
+
+.error a {
+  color: #11826D;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /************Media Queries*************/
 /************768 width*************/
 @media screen and (max-width: 768px) {
