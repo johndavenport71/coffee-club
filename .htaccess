@@ -1,0 +1,1 @@
+ErrorDocument 404 http://localhost/web250/coffee-club/public/errors/404-error.php
