@@ -1,9 +1,7 @@
 <?php
   if(!isset($page_title)) { $page_title = 'Home - Coffee Club'; }
 ?>
-
 <!doctype html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -26,8 +24,15 @@
         <nav>
             <a href="index.php">Home</a>
             <div class="login">
-                <a href="<?= url_for('/sign-up.php'); ?>">Sign Up</a>
-                <a href="<?= url_for('/members/index.php'); ?>">Login</a>
+                <?php
+                  if($_SESSION['loggedIn']){
+                    echo '<a href="' . url_for('/members/index.php') . '">Dashboard</a>';
+                    echo '<a href="' . url_for('/log-out.php') . '">Log Out</a>';
+                  } else {
+                    echo '<a href="' . url_for('/sign-up.php') . '">Sign Up</a>';
+                    echo '<a href="' . url_for('/login.php') . '">Login</a>';
+                  }
+                ?>
             </div>
         </nav>
         <h1>Coffee Club</h1>

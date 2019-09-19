@@ -1,9 +1,7 @@
 <?php
   if(!isset($page_title)) { $page_title = 'Coffee Club'; }
 ?>
-
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -13,15 +11,21 @@
     <link rel="preload" href="/public/stylesheets/coffee-club.css">
     <link rel="stylesheet" href="<?= url_for('/stylesheets/coffee-club.css'); ?>">
   </head>
-
   <body>      
     <header class="member-header">
       <h1><a href="<?= url_for('index.php'); ?>">Coffee Club</a></h1>
       <nav>
         <a href="<?= url_for('index.php') ?>">Home</a>
         <div class="login">
-          <a href="<?= url_for('/sign-up.php'); ?>">Sign Up</a>
-          <a href="<?= url_for('/members/index.php'); ?>">Login</a>
+          <?php
+            if($_SESSION['loggedIn']){
+              echo '<a href="' . url_for('/members/index.php') . '">Dashboard</a>';
+              echo '<a href="' . url_for('/log-out.php') . '">Log Out</a>';
+            } else {
+              echo '<a href="' . url_for('/sign-up.php') . '">Sign Up</a>';
+              echo '<a href="' . url_for('/login.php') . '">Login</a>';
+            }
+          ?>
         </div>
       </nav>
     </header>

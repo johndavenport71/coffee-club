@@ -118,7 +118,7 @@ nav .login {
   margin: 0 1rem;
   padding: .5rem 1rem;
   text-align: center;
-  width: 115px;
+  min-width: 150px;
 }
 
 .login a:first-of-type {

@@ -2,7 +2,6 @@
     require_once('../private/initialize.php'); 
     $page_title = 'Member Sign Up - Coffee Club'; 
     include(SHARED_PATH . '/header.php'); 
-    
 ?>
 
 <main class="sign-up">

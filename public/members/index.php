@@ -10,7 +10,7 @@
   ];
 
   $page_title = 'Members Area - Coffee Club';
-  include(SHARED_PATH . '/header.php'); 
+  include(SHARED_PATH . '/header.php');
 ?>
 
 <main>
@@ -40,9 +40,7 @@
     	  </tr>
       <?php } ?>
   	</table>
-
   </div>
-
 </main>
 
 <?php include(SHARED_PATH . '/footer.php'); ?>
