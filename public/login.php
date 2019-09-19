@@ -16,7 +16,7 @@
 <main>
     <form action="validateMember.php" method="POST">
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email"><br>
+        <input type="email" id="email" name="email" required><br>
         <input type="submit" value="login">
     </form>
 </main>
