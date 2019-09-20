@@ -6,7 +6,7 @@
 
 <main class="sign-up">
     <h2>New Member Sign Up</h2>
-    <form action="" method="POST">
+    <form action="register-member.php" method="POST">
         <label for="fname">First Name:</label>
         <input type="text" id="fname" name="fname" required><br>
         
@@ -15,6 +15,9 @@
         
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br>
+
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="pass" required><br>
 
         <input type="submit" value="Register">
     </form>

@@ -4,19 +4,22 @@
     $_SESSION['match'] = false;
     $_SESSION['loginAttempt'] = true;
     $email = htmlspecialchars($_POST['email']);
+    $pass = htmlspecialchars($_POST['pass']);
 
-    $members = [
-        ['id' => '1', 'firstName' => 'Sarah', 'lastName' => 'Perkins', 'email' => 'sarahn@email.com'],
-        ['id' => '2', 'firstName' => 'Bill', 'lastName' => 'Perkins', 'email' => 'billn@email.com'],
-        ['id' => '3', 'firstName' => 'Daphne', 'lastName' => 'Cooper', 'email' => 'daphnec@email.com'],
-        ['id' => '4', 'firstName' => 'Sean', 'lastName' => 'Bean', 'email' => 'boromir@email.com'],
-        ['id' => '5', 'firstName' => 'Francis', 'lastName' => 'Moore', 'email' => 'francism@email.com']
-    ];
+    /*members passwords
+        sarahn@email.com: 12345
+        billn@email.com: password
+        daphnec@email.com: mydog
+        boromir@email.com: thering
+        francism@email.com: hello
+    */
 
     foreach($members as $member) {
         if($member['email'] == $email) {
-           $_SESSION['match'] = true;
-           $_SESSION['loggedIn'] = true;
+            if(password_verify($pass, $member['hash'])) {
+                $_SESSION['match'] = true;
+                $_SESSION['loggedIn'] = true;
+            }           
         } 
     }
 

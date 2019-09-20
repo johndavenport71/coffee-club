@@ -21,6 +21,7 @@
   define("WWW_ROOT", $doc_root);
 
   require_once('functions.php');
+  include('members.php');
 
   $_SESSION['loggedIn'] = $_SESSION['loggedIn'] ?? false;
 ?>
