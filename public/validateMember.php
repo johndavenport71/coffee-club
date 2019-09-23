@@ -14,15 +14,19 @@
         francism@email.com: hello
     */
 
-    foreach($members as $member) {
-        if($member['email'] == $email) {
-            if(password_verify($pass, $member['hash'])) {
+    $sql = "SELECT email, pass_hash FROM members";
+    $results = $conn->query($sql);
+
+    while($row = $results->fetch()) {
+        if($row['email'] == $email) {
+            if(password_verify($pass, $row['pass_hash'])) {
                 $_SESSION['match'] = true;
                 $_SESSION['loggedIn'] = true;
+                break;
             }           
-        } 
+        }
     }
-
+    
     if($_SESSION['match']) {
         header('Location: ' .  url_for('/members/index.php'));
     } else {

@@ -213,6 +213,22 @@ main {
   margin: 1rem;
 }
 
+main .add {
+  background-color: #11826D;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px #25120b;
+  color: #fff8f6;
+  margin-top: 2.5rem;
+  padding: .5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+main .add:hover {
+  background-color: #E5FFF9;
+  color: #11826D;
+}
+
 .members .add {
   background-color: #11826D;
   border-radius: 5px;
@@ -226,6 +242,10 @@ main {
 .members .add:hover {
   background-color: #E5FFF9;
   color: #11826D;
+}
+
+.show {
+  margin: 2rem;
 }
 
 /************Table Styles*************/

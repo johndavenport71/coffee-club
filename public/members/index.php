@@ -33,17 +33,17 @@
 
       <?php while($row = $results->fetch()) { ?>
         <tr>
-          <td><?= $row['ID']; ?></td>
+          <td><?= $row['memberID']; ?></td>
           <td><?= $row['first_name']; ?></td>
           <td><?= $row['last_name']; ?></td>
     	    <td><?= $row['email']; ?></td>
           <td colspan="3">
             <a href="<?= url_for(
-              'members/show.php?id=' . u($row['ID']) . '&fname=' . u($row['first_name']) . 
+              'members/show.php?id=' . u($row['memberID']) . '&fname=' . u($row['first_name']) . 
               '&lname=' . u($row['last_name']) . '&email=' . u($row['email'])
               ); ?>">View</a>
             <a href="<?= url_for(
-              'members/edit.php?id=' . u($row['ID']) . '&fname=' . u($row['first_name']) . 
+              'members/edit.php?id=' . u($row['memberID']) . '&fname=' . u($row['first_name']) . 
               '&lname=' . u($row['last_name']) . '&email=' . u($row['email'])
               ); ?>">Edit</a>
             <a href="">Delete</a>

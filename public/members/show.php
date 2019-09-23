@@ -9,7 +9,7 @@
 ?>
 
 <main>
-  <a class="back-link" href="<?= url_for('/members/index.php'); ?>">&laquo; Back to List</a>
+  <a class="add" href="<?= url_for('/members/index.php'); ?>">&laquo; Back to List</a>
   <div class="subject show">
     ID: <?= h($id); ?><br>
     First Name: <?= h($fname); ?><br>
