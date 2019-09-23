@@ -9,14 +9,19 @@
   //   ['id' => '5', 'firstName' => 'Francis', 'lastName' => 'Moore', 'email' => 'francism@email.com']
   // ];
 
+  $sql = "SELECT * FROM members;";
+  $results = $conn->query($sql);
+
+
   $page_title = 'Members Area - Coffee Club';
   include(SHARED_PATH . '/header.php');
+
 ?>
 
 <main>
   <div class="members">
     <h2>Members</h2>
-    <a class="add" href="">Add new member</a>
+    <a class="add" href="<?= url_for('/sign-up.php'); ?>">Add new member</a>
   	<table class="list">
   	  <tr>
         <th>ID</th>
@@ -26,15 +31,21 @@
   	    <th colspan="3">Manage</th>
   	  </tr>
 
-      <?php foreach($members as $member) { ?>
+      <?php while($row = $results->fetch()) { ?>
         <tr>
-          <td><?= h($member['id']); ?></td>
-          <td><?= h($member['firstName']); ?></td>
-          <td><?= $member['lastName']; ?></td>
-    	    <td><?= h($member['email']); ?></td>
+          <td><?= $row['ID']; ?></td>
+          <td><?= $row['first_name']; ?></td>
+          <td><?= $row['last_name']; ?></td>
+    	    <td><?= $row['email']; ?></td>
           <td colspan="3">
-            <a href="<?= url_for('members/show.php?id=' . h(u($member['id']))); ?>">View</a>
-            <a href="">Edit</a>
+            <a href="<?= url_for(
+              'members/show.php?id=' . u($row['ID']) . '&fname=' . u($row['first_name']) . 
+              '&lname=' . u($row['last_name']) . '&email=' . u($row['email'])
+              ); ?>">View</a>
+            <a href="<?= url_for(
+              'members/edit.php?id=' . u($row['ID']) . '&fname=' . u($row['first_name']) . 
+              '&lname=' . u($row['last_name']) . '&email=' . u($row['email'])
+              ); ?>">Edit</a>
             <a href="">Delete</a>
           </td>
     	  </tr>
