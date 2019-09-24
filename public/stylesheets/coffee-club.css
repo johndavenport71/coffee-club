@@ -293,6 +293,11 @@ tr:nth-of-type(even) {
   text-align: center;
 }
 
+.sign-up p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 form {
   background-color: #fff8f6;
   border-radius: 5px;

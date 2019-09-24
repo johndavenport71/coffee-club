@@ -31,7 +31,7 @@
           <td colspan="3">
             <a href="<?= url_for('members/show.php?id=' . u($row['memberID'])); ?>">View</a>
             <a href="<?= url_for('members/edit.php?id=' . u($row['memberID'])); ?>">Edit</a>
-            <a href="">Delete</a>
+            <a href="<?= url_for('members/delete.php?id=' . u($row['memberID'])); ?>">Delete</a>
           </td>
     	  </tr>
       <?php } ?>
