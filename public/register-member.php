@@ -7,12 +7,14 @@
     $pass = htmlspecialchars($_POST['pass']);
     $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO members (first_name, last_name, email, pass_hash)
-        VALUES ('".$fname."', '".$lname."', '".$email."', '".$hashedPass."');";
-
-    $prepped = $conn->prepare($sql);
+    $sql = $conn->prepare("INSERT INTO members (first_name, last_name, email, pass_hash)
+        VALUES (:fname, :lname, :email, :pass_hash);");
+    $sql->bindParam(':fname', $fname);
+    $sql->bindParam(':lname', $lname);
+    $sql->bindParam(':email', $email);
+    $sql->bindParam(':pass_hash', $hashedPass);
     try {
-        $prepped->execute();
+        $sql->execute();
     } catch(PDOException $e) {
         echo $e->getMessage();
         die();

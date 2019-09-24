@@ -7,9 +7,12 @@
     $lname = htmlspecialchars($_POST['lname']);
     $email = htmlspecialchars($_POST['email']);
 
-    $update = "UPDATE members SET first_name = '". $fname ."', last_name = '"
-        . $lname ."', email = '". $email ."' WHERE memberID = " . $id . ";";
-    $sql = $conn->prepare($update);
+    $sql = $conn->prepare("UPDATE members SET first_name = :fname, last_name = :lname,
+     email = :email WHERE memberID = :id;");
+    $sql->bindParam(':fname', $fname);
+    $sql->bindParam(':lname', $lname);
+    $sql->bindParam(':email', $email);
+    $sql->bindParam(':id', $id);
     $sql->execute();
     header('Location: ' . url_for('/members/index.php'));
     
