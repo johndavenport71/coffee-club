@@ -2,10 +2,10 @@
   require_once('../../private/initialize.php');
 
   if(is_post_request()) {
-    $id = htmlspecialchars($_POST['memberID']);
-    $fname = htmlspecialchars($_POST['fname']);
-    $lname = htmlspecialchars($_POST['lname']);
-    $email = htmlspecialchars($_POST['email']);
+    $id = h($_POST['memberID']);
+    $fname = h($_POST['fname']);
+    $lname = h($_POST['lname']);
+    $email = h($_POST['email']);
 
     $sql = $conn->prepare("UPDATE members SET first_name = :fname, last_name = :lname,
      email = :email WHERE memberID = :id;");
@@ -17,10 +17,15 @@
     header('Location: ' . url_for('/members/index.php'));
     
   } else {
-    $id = $_GET['id'] ?? '1'; // PHP > 7.0
-    $fname = $_GET['fname'] ?? ''; // PHP > 7.0
-    $lname = $_GET['lname'] ?? ''; // PHP > 7.0
-    $email = $_GET['email'] ?? ''; // PHP > 7.0
+    $id = h($_GET['id']) ?? '1'; // PHP > 7.0
+
+    $member = getMember($conn, $id);
+
+    $id = $member['memberID'];
+    $fname = $member['first_name'];
+    $lname = $member['last_name'];
+    $email = $member['email'];
+
     $page_title = 'Edit Member'; 
 
   }

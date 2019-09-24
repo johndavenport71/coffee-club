@@ -10,4 +10,14 @@ try {
 } catch(PDOException $e){
     echo "Connection failed: " . $e->getMessage();
 }
+
+//database functions
+
+function getMember(PDO $conn, int $id) {
+    $sql = $conn->prepare("SELECT memberID, first_name, last_name, email FROM members WHERE memberID = :id");
+    $sql->bindParam(':id', $id);
+    $sql->execute();
+    return $sql->fetch();
+}
+
 ?> 

@@ -246,6 +246,7 @@ main .add:hover {
 
 .show {
   margin: 2rem;
+  list-style: none;
 }
 
 /************Table Styles*************/

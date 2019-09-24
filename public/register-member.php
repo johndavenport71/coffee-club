@@ -1,10 +1,10 @@
 <?php
     include('../private/initialize.php');
 
-    $fname = htmlspecialchars($_POST['fname']);
-    $lname = htmlspecialchars($_POST['lname']);
-    $email = htmlspecialchars($_POST['email']);
-    $pass = htmlspecialchars($_POST['pass']);
+    $fname = h($_POST['fname']);
+    $lname = h($_POST['lname']);
+    $email = h($_POST['email']);
+    $pass = h($_POST['pass']);
     $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
 
     $sql = $conn->prepare("INSERT INTO members (first_name, last_name, email, pass_hash)

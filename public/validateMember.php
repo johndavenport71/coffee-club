@@ -3,16 +3,8 @@
 
     $_SESSION['match'] = false;
     $_SESSION['loginAttempt'] = true;
-    $email = htmlspecialchars($_POST['email']);
-    $pass = htmlspecialchars($_POST['pass']);
-
-    /*members passwords
-        sarahn@email.com: 12345
-        billn@email.com: password
-        daphnec@email.com: mydog
-        boromir@email.com: thering
-        francism@email.com: hello
-    */
+    $email = h($_POST['email']);
+    $pass = h($_POST['pass']);
 
     $sql = "SELECT email, pass_hash FROM members";
     $results = $conn->query($sql);
