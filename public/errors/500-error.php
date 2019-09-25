@@ -5,9 +5,11 @@ include(SHARED_PATH . '/header.php');
 
 ?>
 <body>
-    <h1>500 Internal Server Error</h1>
-
-    <p>Something went wrong.</p>
-
+    <div class="error">
+        <img src="<?= url_for('/images/spilled-coffee.png'); ?>" alt="Spilled coffee">
+        <h2>Oops, Something went wrong.</h2>
+        <p>We're having technical difficulties.</p>
+        <p>Click <a href="<?= url_for('/index.php'); ?>" title="Home">here</a> to go back to the home page</p>
+    </div>
 </body>
 <?php include(SHARED_PATH . '/footer.php'); ?>
