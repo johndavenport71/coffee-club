@@ -9,7 +9,6 @@ include(SHARED_PATH . '/header.php');
         <img src="<?= url_for('/images/spilled-coffee.png'); ?>" alt="Spilled coffee">
         <h2>Oops, Something went wrong.</h2>
         <p>The page you are looking wasn't found</p>
-
         <p>Click <a href="<?= url_for('/index.php'); ?>" title="Home">here</a> to go back to the home page</p>
     </div>
 </body>
