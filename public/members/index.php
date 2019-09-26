@@ -1,8 +1,7 @@
 <?php 
   require_once('../../private/initialize.php'); 
-
-  $sql = "SELECT * FROM members;";
-  $results = $conn->query($sql);
+  
+  $results = getMembers($conn);
 
   $page_title = 'Members Area - Coffee Club';
   include(SHARED_PATH . '/header.php');

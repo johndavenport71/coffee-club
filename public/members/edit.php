@@ -7,13 +7,7 @@
     $lname = h($_POST['lname']);
     $email = h($_POST['email']);
 
-    $sql = $conn->prepare("UPDATE members SET first_name = :fname, last_name = :lname,
-     email = :email WHERE memberID = :id;");
-    $sql->bindParam(':fname', $fname);
-    $sql->bindParam(':lname', $lname);
-    $sql->bindParam(':email', $email);
-    $sql->bindParam(':id', $id);
-    $sql->execute();
+    editMember($conn, $id, $fname, $lname, $email);
     header('Location: ' . url_for('/members/index.php'));
     
   } else {

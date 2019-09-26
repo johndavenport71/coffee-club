@@ -3,13 +3,11 @@
 
   if(is_post_request()) {
     $id = h($_POST['memberID']);
-    $fname = h($_POST['fname']);
-    $lname = h($_POST['lname']);
-    $email = h($_POST['email']);
+    // $fname = h($_POST['fname']);
+    // $lname = h($_POST['lname']);
+    // $email = h($_POST['email']);
 
-    $sql = $conn->prepare("DELETE FROM members WHERE memberID = :id");
-    $sql->bindParam(':id', $id);
-    $sql->execute();
+    deleteMember($conn, $id);
     header('Location: ' . url_for('/members/index.php'));
     
   } else {
