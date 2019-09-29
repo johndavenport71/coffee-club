@@ -380,6 +380,11 @@ footer a {
   text-decoration: none;
 }
 
+p.error {
+  color: #F00;
+  padding: 0;
+}
+
 /************Media Queries*************/
 /************768 width*************/
 @media screen and (max-width: 768px) {
