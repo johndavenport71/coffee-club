@@ -10,6 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preload" href="/public/stylesheets/coffee-club.css">
     <link rel="stylesheet" href="<?= url_for('/stylesheets/coffee-club.css'); ?>">
+    <script src="<?= url_for('/js/jquery-3.4.1.min.js'); ?>"></script>
+    <script src="<?= url_for('/js/scripts.js'); ?>"></script>
   </head>
   <body>      
     <header class="member-header">

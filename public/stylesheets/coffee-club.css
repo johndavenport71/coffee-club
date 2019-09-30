@@ -139,6 +139,17 @@ a:hover {
   color: #11826D;
 }
 
+#nav-toggle {
+  color: #0D0000;
+  cursor: pointer;
+  display: none;
+  height: 40px;
+  position: absolute;
+  top: 3px;
+  right: 5%;
+  width: 40px;
+}
+
 /************Main Content*************/
 main {
   background-color: rgba(255, 255, 255, 0);
@@ -149,6 +160,7 @@ main {
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
   margin-top: -80px;
   width: 100%;
 }
@@ -189,7 +201,7 @@ main {
 }
 
 .large {
-  flex: none;
+  flex: 50%;
   padding: 1rem;
 }
 
@@ -399,17 +411,17 @@ p.error {
 
   .flex {
     display: flex;
+    flex-wrap: wrap;
     margin-top: -80px;
     width: 100%;
   }
   
   .tile {
-    color: red;
     flex: 1;
   }
 
   .large {
-    display: flex;
+    flex: 1;
   }
   
   .tile h2 {
@@ -438,3 +450,46 @@ p.error {
 }
 
 /************360 width*************/
+@media screen and (max-width: 380px) {
+  nav {
+    position: absolute;
+    width: 100%;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  nav .login {
+    position: absolute;
+    right: 0;
+    top: 30%;
+  }
+
+  .login a {  
+    display: none;
+    margin: 1rem;
+    padding: .5rem 1rem;
+  }
+
+  #nav-toggle {
+    display: block;
+  }
+
+  .main-header h1,
+  .main-header p {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .main-header h1 {
+    margin-top: 3rem;
+  }
+
+  .flex {
+    margin-top: -40px;
+  }
+
+
+}
+

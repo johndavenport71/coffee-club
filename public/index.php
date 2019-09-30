@@ -23,12 +23,13 @@
       <p>Contact us for partnership opportunities.</p>
       <img src="images/tile-3.jpg" alt="A customer ordering at a coffee shop" width=250px height=200px>
     </div>
+    <div class="tile large">
+      <h2>Sign Up Now and Start Ordering</h2>
+      <p>Experience our excellent customer service and world class products!</p>
+      <a href="<?= url_for('/sign-up.php'); ?>" class="cta">Sign Up!</a>
+    </div>
   </div>
-  <div class="tile large">
-    <h2>Sign Up Now and Start Ordering</h2>
-    <p>Experience our excellent customer service and world class products!</p>
-    <a href="<?= url_for('/sign-up.php'); ?>" class="cta">Sign Up!</a>
-  </div>
+  
 </main>
 
 <?php include(SHARED_PATH . '/footer.php'); ?>
