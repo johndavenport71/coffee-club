@@ -15,7 +15,7 @@
   </head>
   <body>      
     <header class="member-header">
-      <h1><a href="<?= url_for('index.php'); ?>">Coffee Club</a></h1>
+      <h1><a href="<?= url_for('index.php'); ?>" class="logo">Coffee Club</a></h1>
       <nav>
         <a href="<?= url_for('index.php') ?>">Home</a>
         <div class="login">
@@ -29,5 +29,6 @@
             }
           ?>
         </div>
+        <img src="<?= url_for('/images/bars-solid.svg') ?>" alt="" id="nav-toggle">
       </nav>
     </header>

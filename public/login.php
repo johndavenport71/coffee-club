@@ -13,7 +13,8 @@
     }
 ?>
 
-<main>
+<main class="sign-up">
+    <h2>Member Login</h2>
     <form action="validateMember.php" method="POST">
         <label for="email">Email Address:</label>
         <input type="email" id="email" name="email" required><br>

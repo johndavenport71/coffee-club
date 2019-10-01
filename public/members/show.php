@@ -13,7 +13,7 @@
   include(SHARED_PATH . '/header.php');
 ?>
 
-<main>
+<main class="members">
   <a class="add" href="<?= url_for('/members/index.php'); ?>">&laquo; Back to List</a>
   <ul class="show">
     <li>Member ID: <?= h($id); ?></li>

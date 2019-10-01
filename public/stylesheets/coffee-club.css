@@ -446,6 +446,28 @@ p.error {
     box-shadow: 0 0 3px #25120b;
     margin: 1rem auto;
   }
+
+  form {
+    width: 85%;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  td,
+  th {
+    padding: .5rem;
+  }
+
+  td a {
+    margin: 0;
+    text-align: right;
+  }
+
+  td:nth-of-type(5) {
+    text-align: right;
+  }
   
 }
 
@@ -490,6 +512,29 @@ p.error {
     margin-top: -40px;
   }
 
+  .sign-up h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  form {
+    text-align: center;
+  }
+
+  .members h2 {
+    margin-top: 3rem;
+  }
+
+  .members {
+    padding-top: 5rem;
+  }
+
+  p.error {
+    padding: 0;
+    margin-top: 4rem;
+    text-align: center;
+    width: 100%;
+  }
 
 }
 
