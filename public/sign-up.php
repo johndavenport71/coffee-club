@@ -6,16 +6,9 @@
     $fname = '';
     $lname = '';
     $email = '';
-
-    if(isset($_GET['fname'])) {
-        $fname = h($_GET['fname']);
-        $lname = h($_GET['lname']);
-        $email = h($_GET['email']);
-        echo '<p class="error">A user with that email already exists!</p>';
-    }
 ?>
 
-<main class="sign-up">
+<main class="sign-up new">
     <h2>New Member Sign Up</h2>
     <form action="register-member.php" method="POST">
         <label for="fname">First Name:</label>

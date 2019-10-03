@@ -4,7 +4,7 @@
   
   $member = getMember($conn, $id);
 
-  $id = $member['memberID'];
+  $id = $member['member_ID'];
   $fname = $member['first_name'];
   $lname = $member['last_name'];
   $email = $member['email'];

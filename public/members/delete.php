@@ -3,9 +3,6 @@
 
   if(is_post_request()) {
     $id = h($_POST['memberID']);
-    // $fname = h($_POST['fname']);
-    // $lname = h($_POST['lname']);
-    // $email = h($_POST['email']);
 
     deleteMember($conn, $id);
     header('Location: ' . url_for('/members/index.php'));
@@ -15,7 +12,7 @@
 
     $member = getMember($conn, $id);
 
-    $id = $member['memberID'];
+    $id = $member['member_ID'];
     $fname = $member['first_name'];
     $lname = $member['last_name'];
     $email = $member['email'];

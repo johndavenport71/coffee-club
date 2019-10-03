@@ -3,10 +3,19 @@ $('document').ready(function(){
         toggleNav();
     });//end toggle function
     
-    if($('main').hasClass('sign-up')) {
+    if($('main').hasClass('new')) {
         $('form input:not([type=submit])').blur(validate);
-        $('form input:not([type=submit])').focus(hideLabel);
         arrEmails = getMemberEmails();
+    }
+
+    if($('main').hasClass('sign-up')) {
+        var inputs = $('form input:not([type=submit])');
+        inputs.focus(hideLabel);
+        $.each(inputs, function() {
+            if(inputs.val() > 0) {
+                $(this).prev().fadeOut(0);
+            }
+        }); 
     }
 });
 
@@ -25,7 +34,7 @@ function toggleNav() {
 
 function hideLabel() {
     var label = $(this).prev();
-    label.fadeOut(250);
+    label.fadeOut(100);
 }// end hideLabel func
 
 function validate() {

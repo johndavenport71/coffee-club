@@ -23,14 +23,14 @@
 
       <?php while($row = $results->fetch()) { ?>
         <tr>
-          <td><?= $row['memberID']; ?></td>
+          <td><?= $row['member_ID']; ?></td>
           <td><?= $row['first_name']; ?></td>
           <td><?= $row['last_name']; ?></td>
     	    <td><?= $row['email']; ?></td>
           <td colspan="3">
-            <a href="<?= url_for('members/show.php?id=' . u($row['memberID'])); ?>">View</a>
-            <a href="<?= url_for('members/edit.php?id=' . u($row['memberID'])); ?>">Edit</a>
-            <a href="<?= url_for('members/delete.php?id=' . u($row['memberID'])); ?>">Delete</a>
+            <a href="<?= url_for('members/show.php?id=' . u($row['member_ID'])); ?>">View</a>
+            <a href="<?= url_for('members/edit.php?id=' . u($row['member_ID'])); ?>">Edit</a>
+            <a href="<?= url_for('members/delete.php?id=' . u($row['member_ID'])); ?>">Delete</a>
           </td>
     	  </tr>
       <?php } ?>
