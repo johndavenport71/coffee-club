@@ -2,7 +2,12 @@ $('document').ready(function(){
     $('#nav-toggle').click(function(){
         toggleNav();
     });//end toggle function
-    $('form input:not([type=submit])').blur(validate);
+    
+    if($('main').hasClass('sign-up')) {
+        $('form input:not([type=submit])').blur(validate);
+        $('form input:not([type=submit])').focus(hideLabel);
+        arrEmails = getMemberEmails();
+    }
 });
 
 function toggleNav() {
@@ -18,16 +23,25 @@ function toggleNav() {
     }
 }//end toggleNav func
 
+function hideLabel() {
+    var label = $(this).prev();
+    label.fadeOut(250);
+}// end hideLabel func
+
 function validate() {
     var icon = $(this).next();
     var input = $(this).val();
     hideMe(icon);
     if(input == '') {
         showMe(icon, 'cancel');
+        $(this).prev().fadeIn(250);
     } else if($(this).attr('type') == 'email') {
-        if(!validateEmail(input)) {
+        if(validEmail(input)) {
             showMe(icon, 'check_circle');
-            console.log('good email');
+            var nextEl = icon.next();
+            if($(nextEl).hasClass('error')) {
+                $(nextEl).remove();
+            }
         } else {
             showMe(icon, 'cancel');
             var nextEl = icon.next();
@@ -59,12 +73,41 @@ function hideMe(elem) {
   });
 }//end hideMe func
 
-function validateEmail(value) {
-    console.log(value);
-    
-    $.post('../public/check-email.php', {email: value}).done(function(data){
-        console.log(data);
-        var result = data.result;
-        return result;
+function getMemberEmails() {
+    $.get('http://localhost/web250/coffee-club/public/check-email.php', function(data) {
+        $('form').data(data);
     });
-}//end validateEmail func
+}// end getMemberEmails func
+
+function validEmail(input) {
+    var emails = $('form').data();
+    var i = 0;
+    while(emails[i]) {
+        if(emails[i] == input) {
+            return false;
+        }
+        i++;
+    }
+    //return true if email is not found
+    return true;
+}
+
+// function validateEmail(value) {
+//     console.log(value);
+//     var result = '';
+//     $.when( $.ajax({
+//             url: '../public/check-email.php',
+//             method: 'POST',
+//             data: {functionname: 'memberEmailExists', arguments: value},
+//             dataType: 'json',
+//         })
+//     ).done(function(data){
+//        return data;
+//     });
+//     // $.post('../public/check-email.php', {email: value}, (function(data){
+//     //     console.log(data);
+//     //     result = data.result;
+//     //     console.log(result);
+//     //     returnEmail(result);
+//     // }));
+// }//end validateEmail func

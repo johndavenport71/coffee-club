@@ -315,27 +315,31 @@ form {
   border-radius: 5px;
   box-shadow: 0 3px 5px #25120b;
   margin: 1rem auto;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   width: 50%;
 }
 
 form label {
   display: block;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
+  margin-bottom: -19px;
 }
 
 form input:not([type="submit"]) {
-  background-color: #f8e3de;
-  border: 1px solid #302825;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+  background-color: rgba(255,255,255,0);
+  border: none;
+  border-bottom: 1px solid #302825;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
   min-height: 1.5rem;
-  padding: 0 .5rem;
+  padding: 0 .6rem;
 }
 
 form input:not([type="submit"]):focus {
-  border: 1px solid #11826D;
+  border: none;
+  border-bottom: 1px solid #302825;
 }
 
 form input[type="submit"] {
