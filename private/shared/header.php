@@ -8,7 +8,9 @@
     <title><?= h($page_title); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preload" href="/public/stylesheets/coffee-club.css">
+    <link rel="preload" href="<?= url_for('/public/stylesheets/coffee-club.css'); ?>">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="preload">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="<?= url_for('/stylesheets/coffee-club.css'); ?>">
     <script src="<?= url_for('/js/jquery-3.4.1.min.js'); ?>"></script>
     <script src="<?= url_for('/js/scripts.js'); ?>"></script>

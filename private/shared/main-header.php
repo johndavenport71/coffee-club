@@ -19,6 +19,8 @@
     <link rel="preload" href="<?= url_for('/public/images/bars-solid.svg'); ?>">
     <link rel="preload" href="<?= url_for('/js/jquery-3.4.1.min.js'); ?>">
     <link rel="preload" href="<?= url_for('/js/scripts.js'); ?>">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="preload">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="<?= url_for('/js/jquery-3.4.1.min.js'); ?>"></script>
     <script src="<?= url_for('/js/scripts.js'); ?>"></script>
     <link rel="stylesheet" href="<?= url_for('/stylesheets/coffee-club.css'); ?>">

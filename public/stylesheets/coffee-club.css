@@ -356,6 +356,26 @@ form input[type="submit"]:hover {
   cursor: pointer;
 }
 
+.icon {
+  padding: 0;
+  margin-left: 5px;
+  margin-top: 0;
+  position: absolute;
+}
+
+.hide {
+  transition: .75s linear;
+  transition-property: all;
+  opacity: 0;
+  transform: rotate(360deg);
+}
+
+.show {
+  opacity: 1;
+  transition: .5s linear;
+  transition-property: all;
+  transform: rotate(-360deg);
+}
 
 /************Footer*************/
 footer {
@@ -398,10 +418,12 @@ p.error {
   padding: 0;
 }
 
-form p.error {
+form span.error {
+  color: #f00;
   font-size: 12px;
   margin: 0;
   padding: 0;
+  margin-left: 2rem;
 }
 
 /************Media Queries*************/
