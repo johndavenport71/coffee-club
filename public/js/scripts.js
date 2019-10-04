@@ -5,7 +5,6 @@ $('document').ready(function(){
     
     if($('main').hasClass('new')) {
         $('form input:not([type=submit])').blur(validate);
-        arrEmails = getMemberEmails();
     }
 
     if($('main').hasClass('sign-up')) {
@@ -15,7 +14,7 @@ $('document').ready(function(){
             if(inputs.val() > 0) {
                 $(this).prev().fadeOut(0);
             }
-        }); 
+        });
     }
 });
 
@@ -38,6 +37,7 @@ function hideLabel() {
 }// end hideLabel func
 
 function validate() {
+    var patt = /[0-9]{3}-[0-9]{3}-[0-9]{4}/;
     var icon = $(this).next();
     var input = $(this).val();
     hideMe(icon);
@@ -46,6 +46,12 @@ function validate() {
         $(this).prev().fadeIn(250);
     } else if($(this).attr('type') == 'email') {
         validateEmail(input, icon);
+    } else if($(this).attr('type') == 'tel') {
+        if(patt.test(input)) {
+            showMe(icon, 'check_circle');
+        } else {
+            showMe(icon, 'cancel');
+        }
     } else { 
         showMe(icon, 'check_circle');
     }
@@ -53,9 +59,9 @@ function validate() {
 
 function showMe(elem, content) {
   if(content == 'cancel') {
-    elem.css({'color':'red', 'opacity':1});
+    elem.css({'color':'#B5050F', 'opacity':1});
   } else {
-    elem.css({'color':'green', 'opacity':1});
+    elem.css({'color':'#0B8F2C', 'opacity':1});
   }
   elem.addClass('show');
   elem.text(content);
@@ -68,25 +74,6 @@ function hideMe(elem) {
     $(this).text('');
   });
 }//end hideMe func
-
-function getMemberEmails() {
-    $.get('http://localhost/web250/coffee-club/public/check-email.php', function(data) {
-        $('form').data(data);
-    });
-}// end getMemberEmails func
-
-function validEmail(input) {
-    var emails = $('form').data();
-    var i = 0;
-    while(emails[i]) {
-        if(emails[i] == input) {
-            return false;
-        }
-        i++;
-    }
-    //return true if email is not found
-    return true;
-}
 
 function validateEmail(value, icon) {
     $.post('../public/check-email.php', {email: value}, (function(data){

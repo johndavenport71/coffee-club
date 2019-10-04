@@ -60,7 +60,7 @@ header {
 .cta {
   background-color: #11826D;
   border-radius: 5px;
-  box-shadow: 0 3px 5px #25120b;
+  box-shadow: 0 2px 3px #25120b;
   display: block;
   color: #fff8f6;
   font-size: 2rem;    
@@ -96,7 +96,7 @@ header {
 /************Navigation*************/
 nav {
   background-color: rgba(250, 242, 240, 0.7);
-  box-shadow: 0 3px 5px #25120b;
+  box-shadow: 0 2px 3px #25120b;
   padding: 1.5rem 3rem;
 }
 
@@ -113,7 +113,7 @@ nav .login {
 
 .login a {
   border-radius: 5px;
-  box-shadow: 0 1px 3px #0D0000;
+  box-shadow: 0 1px 3px #25120b;
   display: inline-block;
   margin: 0 1rem;
   padding: .5rem 1rem;
@@ -168,7 +168,7 @@ main {
 .tile {
   background-color: #fff8f6;
   border-radius: 5px;
-  box-shadow: 0 3px 5px #25120b;
+  box-shadow: 0 2px 3px #25120b;
   flex: 1;
   padding: 0 .5rem;
   padding-bottom: 1rem;
@@ -228,7 +228,7 @@ main {
 main .add {
   background-color: #11826D;
   border-radius: 5px;
-  box-shadow: 0 3px 5px #25120b;
+  box-shadow: 0 2px 3px #25120b;
   color: #fff8f6;
   margin-top: 2.5rem;
   padding: .5rem;
@@ -244,7 +244,7 @@ main .add:hover {
 .members .add {
   background-color: #11826D;
   border-radius: 5px;
-  box-shadow: 0 3px 5px #25120b;
+  box-shadow: 0 2px 3px #25120b;
   color: #fff8f6;
   padding: .5rem;
   text-align: center;
@@ -278,7 +278,7 @@ td {
 td a {
   background-color: #11826D;
   border-radius: 5px;
-  box-shadow: 0 1px 5px #25120b;
+  box-shadow: 0 1px 3px #25120b;
   color: #fff8f6;
   margin: auto 1rem;
   padding: 5px;
@@ -313,7 +313,7 @@ tr:nth-of-type(even) {
 form {
   background-color: #fff8f6;
   border-radius: 5px;
-  box-shadow: 0 3px 5px #25120b;
+  box-shadow: 0 2px 3px #25120b;
   margin: 1rem auto;
   padding: 2rem 2rem;
   width: 50%;
