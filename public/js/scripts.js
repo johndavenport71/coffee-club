@@ -45,20 +45,7 @@ function validate() {
         showMe(icon, 'cancel');
         $(this).prev().fadeIn(250);
     } else if($(this).attr('type') == 'email') {
-        if(validEmail(input)) {
-            showMe(icon, 'check_circle');
-            var nextEl = icon.next();
-            if($(nextEl).hasClass('error')) {
-                $(nextEl).remove();
-            }
-        } else {
-            showMe(icon, 'cancel');
-            var nextEl = icon.next();
-            if($(nextEl).hasClass('error')) {
-                $(nextEl).remove();
-            }
-            icon.after('<span class="error">A user with this email already exists.</span>');
-        }
+        validateEmail(input, icon);
     } else { 
         showMe(icon, 'check_circle');
     }
@@ -101,22 +88,21 @@ function validEmail(input) {
     return true;
 }
 
-// function validateEmail(value) {
-//     console.log(value);
-//     var result = '';
-//     $.when( $.ajax({
-//             url: '../public/check-email.php',
-//             method: 'POST',
-//             data: {functionname: 'memberEmailExists', arguments: value},
-//             dataType: 'json',
-//         })
-//     ).done(function(data){
-//        return data;
-//     });
-//     // $.post('../public/check-email.php', {email: value}, (function(data){
-//     //     console.log(data);
-//     //     result = data.result;
-//     //     console.log(result);
-//     //     returnEmail(result);
-//     // }));
-// }//end validateEmail func
+function validateEmail(value, icon) {
+    $.post('../public/check-email.php', {email: value}, (function(data){
+        if(!data) {
+            showMe(icon, 'check_circle');
+            var nextEl = icon.next();
+            if($(nextEl).hasClass('error')) {
+                $(nextEl).remove();
+            }
+        } else {
+            showMe(icon, 'cancel');
+            var nextEl = icon.next();
+            if($(nextEl).hasClass('error')) {
+                $(nextEl).remove();
+            }
+            icon.after('<span class="error">A user with this email already exists.</span>');
+        }
+    }));
+}//end validateEmail func
