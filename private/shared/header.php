@@ -31,6 +31,6 @@
             }
           ?>
         </div>
-        <img src="<?= url_for('/images/bars-solid.svg') ?>" alt="" id="nav-toggle">
+        <i class="material-icons" id="nav-toggle">menu</i>
       </nav>
     </header>

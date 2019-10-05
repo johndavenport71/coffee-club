@@ -41,7 +41,7 @@
                   }
                 ?>
             </div>
-            <img src="<?= url_for('/images/bars-solid.svg') ?>" alt="" id="nav-toggle">
+            <i class="material-icons" id="nav-toggle">menu</i>
         </nav>
         <h1>Coffee Club</h1>
         <p>Your neighborhood coffee supplier</p>
