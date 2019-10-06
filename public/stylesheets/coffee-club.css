@@ -505,8 +505,8 @@ form span.error {
   
 }
 
-/************360 width*************/
-@media screen and (max-width: 380px) {
+/************380 width*************/
+@media screen and (max-width: 400px) {
   nav {
     position: absolute;
     width: 100%;
@@ -572,4 +572,3 @@ form span.error {
   }
 
 }
-
