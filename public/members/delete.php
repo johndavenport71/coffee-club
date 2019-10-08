@@ -23,7 +23,7 @@
 
   include(SHARED_PATH . '/header.php');
 ?>
-  <main class="sign-up">
+  <main class="sign-up" role="main">
     <a class="add" href="<?= url_for('/members/index.php'); ?>">&laquo; Back to List</a>
     <h2>Delete Member</h2>
     <p>Are you sure you want to delete this member?</p>

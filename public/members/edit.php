@@ -26,7 +26,7 @@
 
   include(SHARED_PATH . '/header.php');
 ?>
-  <main class="sign-up">
+  <main class="sign-up" role="main">
     <a class="add" href="<?= url_for('/members/index.php'); ?>">&laquo; Back to List</a>
     <h2>Edit Member</h2>
     <form action="edit.php" method="POST">

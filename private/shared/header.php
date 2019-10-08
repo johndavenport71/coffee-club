@@ -16,18 +16,18 @@
     <script src="<?= url_for('/js/scripts.js'); ?>"></script>
   </head>
   <body>      
-    <header class="member-header">
+    <header class="member-header" role="banner">
       <h1><a href="<?= url_for('index.php'); ?>" class="logo">Coffee Club</a></h1>
-      <nav>
-        <a href="<?= url_for('index.php') ?>">Home</a>
+      <nav role="navigation">
+        <a href="<?= url_for('index.php') ?>" title="Home">Home</a>
         <div class="login">
           <?php
             if($_SESSION['loggedIn']){
-              echo '<a href="' . url_for('/members/index.php') . '">Dashboard</a>';
-              echo '<a href="' . url_for('/log-out.php') . '">Log Out</a>';
+              echo '<a href="' . url_for('/members/index.php') . '" title="Dashboard">Dashboard</a>';
+              echo '<a href="' . url_for('/log-out.php') . '" title="Log Out">Log Out</a>';
             } else {
-              echo '<a href="' . url_for('/sign-up.php') . '">Sign Up</a>';
-              echo '<a href="' . url_for('/login.php') . '">Login</a>';
+              echo '<a href="' . url_for('/sign-up.php') . '" title="Sign Up">Sign Up</a>';
+              echo '<a href="' . url_for('/login.php') . '" title="Login">Login</a>';
             }
           ?>
         </div>

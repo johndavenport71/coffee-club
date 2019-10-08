@@ -8,7 +8,7 @@
     $email = '';
 ?>
 
-<main class="sign-up new">
+<main class="sign-up new" role="main">
     <h2>New Member Sign Up</h2>
     <form action="register-member.php" method="POST">
         <label for="fname">First Name:</label>

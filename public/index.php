@@ -3,7 +3,7 @@
     include(SHARED_PATH . '/main-header.php');
 ?>
 
-<main>
+<main role="main">
   <div class="flex">
     <div class="tile">
       <h2>Coffee Beans</h2>

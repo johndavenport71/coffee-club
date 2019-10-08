@@ -300,6 +300,48 @@ tr:nth-of-type(even) {
   background-color: #f8e3de;
 }
 
+/************Pop Out Menu Styles*************/
+#pop-up {
+  color: white;
+  background-color: #11826D;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px #25120b;
+  display: flex;
+  height: 55px;
+  position: relative;
+  width: 220px;
+}
+
+#pop-up::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid #11826D;
+  top: -28px;
+  right: 10px;
+}
+
+#pop-up a {
+  color: #fff;
+  font-weight: bold;
+  flex: 1;
+  margin: 18px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#pop-up a:hover {
+  text-decoration: underline;
+}
+
+.more {
+  cursor: pointer;
+  display: none;
+}
+
 /************Form Styles*************/
 .sign-up h2 {
   font-size: 2.5rem;
@@ -489,6 +531,10 @@ form span.error {
     display: none;
   }
 
+  table {
+    table-layout: auto;
+  }
+
   td,
   th {
     padding: .5rem;
@@ -501,6 +547,14 @@ form span.error {
 
   td:nth-of-type(5) {
     text-align: right;
+  }
+
+  td:nth-of-type(5) a {
+    display: none;
+  }
+
+  .more {
+    display: inline-block;
   }
   
 }
