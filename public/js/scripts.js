@@ -16,6 +16,7 @@ $('document').ready(function(){
             }
         });
     }
+    initButton();
 });
 
 function toggleNav() {
@@ -93,3 +94,28 @@ function validateEmail(value, icon) {
         }
     }));
 }//end validateEmail func
+
+
+function hidePopUp() {
+    $('.pop-up').hide();
+}
+
+function initButton() {
+  $('.more').click(popUp);
+}
+
+function popUp() {
+  var display = $(this).next();
+  var pos = $(this).position();
+  display.css({
+    'position':'absolute',
+    'top':pos.top + 33,
+    'left':pos.left - 178,
+    'display':'flex'
+  });
+  $(this).after(display);
+  display.fadeIn();
+  $(display).mouseleave(function(){
+      display.fadeOut();
+  });
+}

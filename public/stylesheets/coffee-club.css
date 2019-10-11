@@ -276,7 +276,7 @@ td {
   padding: 1rem; 
 }
 
-td a {
+/* td a {
   background-color: #11826D;
   border-radius: 5px;
   box-shadow: 0 1px 3px #25120b;
@@ -289,7 +289,7 @@ td a {
 td a:hover {
   background-color: #E5FFF9;
   color: #11826D;
-}
+} */
 
 th {
   background-color: #0D0000;
@@ -301,7 +301,7 @@ tr:nth-of-type(even) {
 }
 
 /************Pop Out Menu Styles*************/
-#pop-up {
+/* #pop-up {
   color: white;
   background-color: #11826D;
   border-radius: 5px;
@@ -340,7 +340,7 @@ tr:nth-of-type(even) {
 .more {
   cursor: pointer;
   display: none;
-}
+} */
 
 /************Form Styles*************/
 .sign-up h2 {
@@ -471,6 +471,101 @@ form span.error {
   margin: 0;
   padding: 0;
   margin-left: 2rem;
+}
+
+/************Member tiles*************/
+div.members {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.member-tile {
+  background-color: #fff8f6;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px #25120b;
+  display: flex;
+  flex: 2;
+  margin: .75rem;
+  padding: 1rem;
+}
+
+.member-tile div {
+  flex: 1;
+  padding: 0 .5rem;
+}
+
+.member-tile div:last-of-type {
+  flex: .5;
+  text-align: right;
+}
+
+.member-tile a {
+  background-color: #11826D;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #25120b;
+  color: #fff8f6;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.member-tile a:hover {
+  background-color: #E5FFF9;
+  color: #11826D;
+}
+
+/************Pop Out Menu Styles*************/
+.pop-up {
+  color: white;
+  background-color: #11826D;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px #25120b;
+  box-sizing: border-box;
+  display: none;
+  height: 55px;
+  position: absolute;
+  width: 220px;
+}
+
+.pop-up::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid #11826D;
+  top: -28px;
+  right: 10px;
+}
+
+.pop-up a {
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  flex: 1;
+  margin: 18px 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pop-up a:hover {
+  background-color: #11826D;
+  color: white;
+  text-decoration: underline;
+}
+
+.more {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.more i {
+  font-size: 2rem;
 }
 
 /************Media Queries*************/

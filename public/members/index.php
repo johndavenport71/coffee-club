@@ -8,34 +8,35 @@
 
 ?>
 
-<main>
-  <div class="members" role="main">
-    <h2>Members</h2>
-    <a class="add" href="<?= url_for('/sign-up.php'); ?>">Add new member</a>
-  	<table class="list">
-  	  <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-  	    <th>Email</th>
-  	    <th colspan="3">Manage</th>
-  	  </tr>
+<main role="main" class="members">
+  
+  <h2>Members</h2>
+  <a class="add" href="<?= url_for('/sign-up.php'); ?>">Add new member</a>
+  <div class="members">
+    <?php while($row = $results->fetch()) { ?>
+        <div class="member-tile">
+          <div>
+            Member ID: <?= $row['member_ID']; ?>
+          </div>
+          <div>
+            <?= $row['first_name']; ?>&nbsp;<?= $row['last_name']; ?>
+          </div>
+          <div>
+            <?= $row['email']; ?>
+          </div>
+          <div>
+            <span class="more"><i class="material-icons">more_horiz</i></span>
+            <div class="pop-up">
+              <a href="<?= url_for('members/show.php?id=' . u($row['member_ID'])); ?>">View</a>
+              <a href="<?= url_for('members/edit.php?id=' . u($row['member_ID'])); ?>">Edit</a>
+              <a href="<?= url_for('members/delete.php?id=' . u($row['member_ID'])); ?>">Delete</a>
+            </div>
+          </div>
+        </div>
 
-      <?php while($row = $results->fetch()) { ?>
-        <tr>
-          <td><?= $row['member_ID']; ?></td>
-          <td><?= $row['first_name']; ?></td>
-          <td><?= $row['last_name']; ?></td>
-    	    <td><?= $row['email']; ?></td>
-          <td colspan="3">
-            <i class="material-icons more">more_vert</i>
-            <a href="<?= url_for('members/show.php?id=' . u($row['member_ID'])); ?>">View</a>
-            <a href="<?= url_for('members/edit.php?id=' . u($row['member_ID'])); ?>">Edit</a>
-            <a href="<?= url_for('members/delete.php?id=' . u($row['member_ID'])); ?>">Delete</a>
-          </td>
-    	  </tr>
-      <?php } ?>
-  	</table>
+    <?php } ?>
+
+
   </div>
 </main>
 

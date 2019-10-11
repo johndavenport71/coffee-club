@@ -32,8 +32,8 @@
             <a href="index.php" title="Home">Home</a>
             <div class="login">
                 <?php
-                    echo '<a href="' . url_for('/members/index.php') . '" title="Dashboard">Dashboard</a>';
                   if($_SESSION['loggedIn']){
+                    echo '<a href="' . url_for('/members/index.php') . '" title="Dashboard">Dashboard</a>';
                     echo '<a href="' . url_for('/log-out.php') . '" title="Log Out">Log Out</a>';
                   } else {
                     echo '<a href="' . url_for('/sign-up.php') . '" title="Sign Up">Sign Up</a>';
