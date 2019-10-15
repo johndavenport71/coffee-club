@@ -6,12 +6,13 @@
     $email = h($_POST['email']);
     $pass = h($_POST['pass']);
 
-    $sql = "SELECT email, pass_hash FROM members";
+    $sql = "SELECT email, pass_hash, pass_salt FROM members";
     $results = $conn->query($sql);
 
     while($row = $results->fetch()) {
         if($row['email'] == $email) {
-            if(password_verify($pass, $row['pass_hash'])) {
+            $checkMe = $row['pass_salt'] . $pass;
+            if(password_verify($checkMe, $row['pass_hash'])) {
                 $_SESSION['match'] = true;
                 $_SESSION['loggedIn'] = true;
                 break;

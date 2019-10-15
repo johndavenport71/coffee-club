@@ -2,7 +2,7 @@
   require_once('../../private/initialize.php');
 
   if(is_post_request()) {
-    $id = h($_POST['memberID']);
+    $id = (int)h($_POST['memberID']);
     $fname = h($_POST['fname']);
     $lname = h($_POST['lname']);
     $email = h($_POST['email']);
