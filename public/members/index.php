@@ -25,6 +25,9 @@
             <?= $row['email']; ?>
           </div>
           <div>
+            <?= $row['phone']; ?>
+          </div>
+          <div>
             <span class="more"><i class="material-icons">more_horiz</i></span>
             <div class="pop-up">
               <a href="<?= url_for('members/show.php?id=' . u($row['member_ID'])); ?>">View</a>

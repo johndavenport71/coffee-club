@@ -23,8 +23,8 @@
         <input type="email" id="email" name="email" required><i class="material-icons icon"></i>
         <br>
 
-        <label for="phone">Phone: xxx-xxx-xxxx</label>
-        <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><i class="material-icons icon"></i>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><i class="material-icons icon"></i>
         <br>
 
         <label for="pass">Password:</label>

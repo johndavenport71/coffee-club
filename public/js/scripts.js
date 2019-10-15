@@ -38,7 +38,6 @@ function hideLabel() {
 }// end hideLabel func
 
 function validate() {
-    var patt = /[0-9]{3}-[0-9]{3}-[0-9]{4}/;
     var icon = $(this).next();
     var input = $(this).val();
     hideMe(icon);
@@ -46,13 +45,7 @@ function validate() {
         showMe(icon, 'cancel');
         $(this).prev().fadeIn(250);
     } else if($(this).attr('type') == 'email') {
-        validateEmail(input, icon);
-    } else if($(this).attr('type') == 'tel') {
-        if(patt.test(input)) {
-            showMe(icon, 'check_circle');
-        } else {
-            showMe(icon, 'cancel');
-        }
+        validateEmail(input, icon); 
     } else { 
         showMe(icon, 'check_circle');
     }
@@ -94,11 +87,6 @@ function validateEmail(value, icon) {
         }
     }));
 }//end validateEmail func
-
-
-function hidePopUp() {
-    $('.pop-up').hide();
-}
 
 function initButton() {
   $('.more').click(popUp);

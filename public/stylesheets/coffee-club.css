@@ -478,16 +478,18 @@ div.members {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1rem;
+  width: 90%;
 }
 
 .member-tile {
-  background-color: #fff8f6;
+  background-color: rgba(250, 242, 240, 0.7);
   border-radius: 5px;
   box-shadow: 0 2px 3px #25120b;
   display: flex;
-  flex: 2;
+  flex: 1;
   margin: .75rem;
-  padding: 1rem;
+  padding: .5rem 1rem;
+  padding-top: 1rem;
 }
 
 .member-tile div {
@@ -497,6 +499,7 @@ div.members {
 
 .member-tile div:last-of-type {
   flex: .5;
+  margin-top: -5px;
   text-align: right;
 }
 
@@ -651,10 +654,15 @@ div.members {
   .more {
     display: inline-block;
   }
+
+  div.members {
+    width: 100%;
+  }
+  
   
 }
 
-/************380 width*************/
+/************400 width*************/
 @media screen and (max-width: 400px) {
   nav {
     position: absolute;

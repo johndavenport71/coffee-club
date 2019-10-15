@@ -6,8 +6,9 @@
     $fname = h($_POST['fname']);
     $lname = h($_POST['lname']);
     $email = h($_POST['email']);
+    $phone = h($_POST['phone']);
 
-    editMember($conn, $id, $fname, $lname, $email);
+    editMember($conn, $id, $fname, $lname, $email, $phone);
     header('Location: ' . url_for('/members/index.php'));
     
   } else {
@@ -19,6 +20,7 @@
     $fname = $member['first_name'];
     $lname = $member['last_name'];
     $email = $member['email'];
+    $phone = $member['phone'];
 
     $page_title = 'Edit Member'; 
 
@@ -40,6 +42,9 @@
         
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" value="<?= $email ?>"><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required value="<?= $phone ?>"><br>
 
         <input type="submit" value="Confirm">
     </form>
