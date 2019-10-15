@@ -8,6 +8,7 @@
   $fname = $member['first_name'];
   $lname = $member['last_name'];
   $email = $member['email'];
+  $phone = $member['phone'];
 
   $page_title = 'Show Member'; 
   include(SHARED_PATH . '/header.php');
@@ -20,6 +21,7 @@
     <li>First Name: <?= h($fname); ?></li>
     <li>Last Name: <?= h($lname); ?></li>
     <li>Email: <?= h($email); ?></li>
+    <li>Phone: <?= h($phone); ?></li>
   </ul>
 </main>
 
