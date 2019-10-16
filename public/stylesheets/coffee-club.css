@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Satisfy&display=swap');
 /************
-  Fonts used:
+  Fonts used>>
 
   Paragraph/body text:
     font-family: 'Roboto', sans-serif;
 
   Headings:
     font-family: 'Satisfy', cursive;
+
+  Colors>>
+  Light background - body: #fff
+  Light background - content: #fff8f6
+  Dark background:
+  Accents: #11826D
+  Light-mode font color: #25120b
+  Dark-mode font color: #fff8f6 
+
 *************/
 
 
@@ -32,9 +41,11 @@ h3 {
 header {
   border-top: 5px solid #11826D;
   box-shadow: 0 2px 3px #302825;
+  color: #1f1816;
 }
 
 .main-header {
+  background-color: #25120b;
   background: url(../images/hero-img.jpg) center/cover no-repeat fixed;
   min-height: 600px;
 }
@@ -71,7 +82,7 @@ header {
 }
 
 .cta:hover {
-  background-color: #E5FFF9;
+  background-color: #fff8f6;
   color: #11826D;
 }
 
@@ -127,7 +138,7 @@ nav .login {
 }
 
 .login a:first-of-type:hover {
-  background-color: #E5FFF9;
+  background-color: #fff8f6;
   color: #11826D;
 }
 
@@ -137,10 +148,11 @@ nav .login {
 
 a:hover {
   color: #11826D;
+  text-decoration: underline;
 }
 
 #nav-toggle {
-  color: #0D0000;
+  color: #25120b;
   cursor: pointer;
   display: none;
   font-size: 2rem;
@@ -217,7 +229,7 @@ main {
 }
 
 .large .cta:hover {
-  background-color: #E5FFF9;
+  background-color: #fff8f6;
   color: #11826D;
 }
 
@@ -238,7 +250,7 @@ main .add {
 }
 
 main .add:hover {
-  background-color: #E5FFF9;
+  background-color: #fff8f6;
   color: #11826D;
 }
 
@@ -253,7 +265,7 @@ main .add:hover {
 }
 
 .members .add:hover {
-  background-color: #E5FFF9;
+  background-color: #fff8f6;
   color: #11826D;
 }
 
@@ -513,13 +525,13 @@ div.members {
 }
 
 .member-tile a:hover {
-  background-color: #E5FFF9;
+  background-color: #fff8f6;
   color: #11826D;
 }
 
 /************Pop Out Menu Styles*************/
 .pop-up {
-  color: white;
+  color: #fff8f6;
   background-color: #11826D;
   border-radius: 5px;
   box-shadow: 0 2px 3px #25120b;
@@ -546,7 +558,7 @@ div.members {
   border: none;
   box-shadow: none;
   box-sizing: border-box;
-  color: #fff;
+  color: #fff8f6;
   display: inline-block;
   font-weight: bold;
   flex: 1;
@@ -557,7 +569,7 @@ div.members {
 
 .pop-up a:hover {
   background-color: #11826D;
-  color: white;
+  color: #fff8f6;
   text-decoration: underline;
 }
 
@@ -571,6 +583,66 @@ div.members {
   font-size: 2rem;
 }
 
+/*******************Dark Mode styling*********************/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1f1816;
+    color: #fff8f6;
+  }
+
+  nav {
+    background-color: rgba(58, 50, 48, 0.7);
+    color: #1BCFAE;
+  }
+
+  .login a:last-of-type {
+    border: 1px solid #25120b;
+    background-color: rgba(58, 50, 48, 0.7);
+  }
+
+  nav a {
+    color: #1BCFAE;
+  }
+
+  header h1 .logo {
+    color: #fff8f6;
+  }
+
+  .tile {
+    background-color: #3a3230;
+  }
+
+  .tile h2 {
+    color: #1BCFAE;
+  }
+
+  .tile a {
+    color: #1BCFAE;
+  }
+
+  .tile p {
+    color: #fff8f6;
+  }
+
+  .member-tile {
+    background-color: #3a3230;
+    color: #fff8f6;
+  }
+
+  form {
+    background-color: #3a3230;
+  }
+
+  form input:not([type=submit]) {
+    border-bottom: 1px solid #1BCFAE;
+    color: #fff8f6;
+  }
+
+  form input:not([type=submit]):focus {
+    border-bottom: 1px solid #1BCFAE;
+  }
+
+}
 /************Media Queries*************/
 /************769 width*************/
 @media screen and (max-width: 769px) {
@@ -605,7 +677,7 @@ div.members {
   }
   
   .tile p {
-    color: #302825;
+    color: #25120b;
     line-height: 1.5rem;
     margin: .5rem auto;
   }
@@ -658,7 +730,6 @@ div.members {
   div.members {
     width: 100%;
   }
-  
   
 }
 

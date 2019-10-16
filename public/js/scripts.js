@@ -53,9 +53,9 @@ function validate() {
 
 function showMe(elem, content) {
   if(content == 'cancel') {
-    elem.css({'color':'#B5050F', 'opacity':1});
+    elem.css({'color':'#E81E28', 'opacity':1});
   } else {
-    elem.css({'color':'#0B8F2C', 'opacity':1});
+    elem.css({'color':'#1BCFAE', 'opacity':1});
   }
   elem.addClass('show');
   elem.text(content);
