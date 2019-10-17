@@ -490,7 +490,7 @@ div.members {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1rem;
-  width: 90%;
+  width: 100%;
 }
 
 .member-tile {
@@ -498,7 +498,7 @@ div.members {
   border-radius: 5px;
   box-shadow: 0 2px 3px #25120b;
   display: flex;
-  flex: 1;
+  flex: 1 1 50%;
   margin: .75rem;
   padding: .5rem 1rem;
   padding-top: 1rem;

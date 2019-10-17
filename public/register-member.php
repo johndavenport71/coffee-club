@@ -6,7 +6,7 @@
     $email = h($_POST['email']);
     $phone = h($_POST['phone']);
     $pass = h($_POST['pass']);
-    $salt = random_bytes(32);
+    $salt = bin2hex(random_bytes(32));
     $newPass = $salt . $pass;
     $hashedPass = password_hash($newPass, PASSWORD_DEFAULT);
 
