@@ -12,7 +12,7 @@
     header('Location: ' . url_for('/members/index.php'));
     
   } else {
-    $id = h($_GET['id']) ?? '1';
+    $id = (int)h($_GET['id']) ?? '1';
 
     $member = getMember($conn, $id);
 

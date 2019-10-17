@@ -2,13 +2,13 @@
   require_once('../../private/initialize.php');
 
   if(is_post_request()) {
-    $id = h($_POST['memberID']);
+    $id = (int)h($_POST['memberID']);
 
     deleteMember($conn, $id);
     header('Location: ' . url_for('/members/index.php'));
     
   } else {
-    $id = h($_GET['id']) ?? '1'; // PHP > 7.0
+    $id = (int)h($_GET['id']) ?? '1'; // PHP > 7.0
 
     $member = getMember($conn, $id);
 
