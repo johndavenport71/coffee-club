@@ -1,0 +1,71 @@
+/*******************Dark Mode styling*********************/
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: $dark-bg-body;
+      color: $dark-font;
+    }
+
+    p {
+        line-height: 1.7rem;
+    }
+  
+    nav {
+      background-color: rgba(58, 50, 48, 0.7);
+      color: $light-accent;
+
+      a {
+        color: $light-accent;
+      }
+    }
+  
+    .login a:last-of-type {
+      border: 1px solid $light-font;
+      background-color: rgba(58, 50, 48, 0.7);
+    }
+    
+    header h1 .logo {
+      color: $dark-font;
+    }
+  
+    .tile {
+      background-color: $dark-bg-content;
+
+      h2 {
+        color: $light-accent;
+      }
+
+      a {
+        color: $light-accent;
+      }
+
+      p {
+        color: $dark-font;
+      }
+    }
+    
+    form {
+      background-color: $dark-bg-content;
+
+      input:not([type=submit]) {
+        border-bottom: 1px solid $light-accent;
+        color: $dark-font;
+      }
+
+      input:not([type=submit]):focus {
+        border-bottom: 1px solid $light-accent;
+      }
+    }
+
+    .product-tile {
+      background-color: $dark-bg-content;
+      color: $dark-font;
+    }
+
+    .member-tile {
+        background-color: $dark-bg-content;
+        color: $dark-font;
+    }
+    
+  
+  }
+  

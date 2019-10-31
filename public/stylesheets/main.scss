@@ -12,4 +12,533 @@ $dark-bg-content: #3a3230;
 $accent: #11826d;
 $light-font: #25120b;
 $dark-font: #fff8f6;
+$light-accent: #1BCFAE;
+
+/************Simple Browser Reset*************/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body,
+  p {
+    font-family: $p-fonts;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: $h-fonts; 
+  }
+
+  /************General Styles*************/
+  a:hover {
+    color: $accent;
+    text-decoration: underline;
+  }
+  
+  
+
+/************Main Header Styles*************/
+header {
+    border-top: 5px solid $accent;
+    box-shadow: 0 2px 3px #302825;
+    color: $dark-bg-body;
+  }
+  
+  .main-header {
+    background-color: $light-font;
+    background: url(../images/hero-img.jpg) center/cover no-repeat fixed;
+    min-height: 600px;
+
+    h1,
+    p {
+      color: $dark-font;
+      margin: 2rem auto;
+      text-align: center;
+      text-shadow: 0 0 10px $light-font;
+      width: 50%;
+    }
+
+    h1 {
+      font-size: 6rem;
+    }
+
+    p {
+      font: 2rem 'Satisfy', cursive;
+      margin-bottom: 4rem;
+    }
+  }
+      
+  .cta {
+    background-color: $accent;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px $light-font;
+    display: block;
+    color: $dark-font;
+    font-size: 2rem;    
+    margin: 1rem auto;
+    padding: 1rem;
+    text-decoration: none;
+    width: 150px;
+  }
+  
+  .cta:hover {
+    background-color: $dark-font;
+    color: $accent;
+  }
+  
+  /************Member Header Styles*************/
+  .member-header {
+    position: relative;
+
+    h1 {
+      font-size: 2.5rem;
+      position: absolute;
+      right: 45%;
+      top: 10%;
+      a {
+        color: #0D0000;
+        text-decoration: none;
+      }
+    }
+  }  
+
+/************Navigation*************/
+nav {
+  background-color: rgba(250, 242, 240, 0.7);
+  box-shadow: 0 2px 3px $light-font;
+  padding: 1.5rem 3rem;
+
+  a {
+    color: #0D0000;
+    font: 1.5rem 'Roboto', sans-serif;
+    text-decoration: none;
+  }
+
+  .login {
+    float: right;
+    margin-top: -10px;
+
+    a {
+      border-radius: 5px;
+      box-shadow: 0 1px 3px $light-font;
+      display: inline-block;
+      margin: 0 1rem;
+      padding: .5rem 1rem;
+      text-align: center;
+      min-width: 150px;
+    }
+
+    a:first-of-type {
+      background-color: $accent;
+      color: $light-bg-content;
+    }
+
+    a:first-of-type:hover {
+      background-color: $light-bg-content;
+      color: $accent;
+    }
+
+    a:last-of-type {
+      border: 1px solid $light-font;
+    }
+
+  }
+}
+
+#nav-toggle {
+  color: $light-font;
+  cursor: pointer;
+  display: none;
+  font-size: 2rem;
+  height: 40px;
+  position: absolute;
+  top: 3px;
+  right: 5%;
+  width: 40px;
+}  
+  
+/************Main Content*************/
+main {
+  background-color: rgba(255, 255, 255, 0);
+  margin: 0 auto;
+  padding: 1rem;
+  width: 85%;
+
+  .add {
+    background-color: $accent;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px $light-font;
+    color: $light-bg-content;
+    margin-top: 2.5rem;
+    padding: .5rem;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .add:hover {
+    background-color: $light-bg-content;
+    color: $accent;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -80px;
+  width: 100%;
+}
+
+.tile {
+  background-color: $light-bg-content;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px $light-font;
+  flex: 1;
+  padding: 0 .5rem;
+  padding-bottom: 1rem;
+  margin: .5rem;
+  min-height: 300px;
+  text-align: center;
+
+  h2 {
+    color: $accent;
+    font-size: 2.5rem;
+    margin: 1rem auto;
+  }
+
+  p {
+    color: $light-font;
+    line-height: 1.5rem;
+    margin: .5rem auto;
+  }
+
+  a {
+    color: $accent;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  img {
+    box-shadow: 0 0 3px $light-font;
+    margin: 1rem auto;
+  }
+}
+
+.large {
+  flex: 50%;
+  padding: 1rem;
+
+  h2 {
+    margin: 1.5rem;
+  }
+
+  .cta {
+    color: $light-bg-content;
+    margin-top: 2rem;
+    width: 200px;
+  }
+
+  .cta:hover {
+    background-color: $light-bg-content;
+    color: $accent;
+  }
+  
+}
+
+.members h2 {
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
+.members .add {
+  background-color: $accent;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px $light-font;
+  color: $light-bg-content;
+  padding: .5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.members .add:hover {
+  background-color: $light-bg-content;
+  color: $accent;
+}
+
+.show {
+  margin: 2rem;
+  list-style: none;
+}
+
+/************Form Styles*************/
+.sign-up h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.sign-up p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+form {
+  background-color: $light-bg-content;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px $light-font;
+  margin: 1rem auto;
+  padding: 2rem 2rem;
+  width: 50%;
+
+  label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: -19px;
+  }
+
+  input:not([type="submit"]) {
+    background-color: rgba(255,255,255,0);
+    border: none;
+    border-bottom: 1px solid $dark-bg-content;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    min-height: 1.5rem;
+    padding: 0 .6rem;
+  }
+
+  input:not([type="submit"]):focus {
+    border: none;
+    border-bottom: 1px solid $dark-bg-content;
+  }
+
+  input[type="submit"] {
+    background-color: $accent;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px $light-font;
+    font-size: 1.2rem;
+    color: $light-bg-content;
+    padding: .5rem;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #E5FFF9;
+    color: $accent;
+    cursor: pointer;
+  }
+}
+
+.icon {
+  padding: 0;
+  margin-left: 5px;
+  margin-top: 0;
+  position: absolute;
+}
+
+.hide {
+  transition: .75s linear;
+  transition-property: all;
+  opacity: 0;
+  transform: rotate(360deg);
+}
+
+.show {
+  opacity: 1;
+  transition: .5s linear;
+  transition-property: all;
+  transform: rotate(-360deg);
+}
+
+/************Footer*************/
+footer {
+  background-color: #0D0000;
+  color: $light-bg-content;
+  padding: 1rem;
+
+  p {
+    margin: .5rem;
+  }
+
+  a {
+    color: $accent;
+    text-decoration: none;
+  }
+  
+}
+
+/************ Error Pages ************/
+.error {
+  font-size: 1.5rem;
+  margin: 2rem auto;
+  padding: 0;
+  text-align: center;
+  width: 50%;
+  p {
+    padding: 1rem;
+  }
+  a {
+    color: $accent;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+p.error {
+  color: #F00;
+  padding: 0;
+}
+
+form span.error {
+  color: #f00;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  margin-left: 2rem;
+}
+
+/************Member tiles*************/
+div.members {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.member-tile {
+  background-color: rgba(250, 242, 240, 0.7);
+  border-radius: 5px;
+  box-shadow: 0 2px 3px $light-font;
+  display: flex;
+  flex: 1 1 50%;
+  margin: .75rem;
+  padding: .5rem 1rem;
+  padding-top: 1rem;
+
+  div {
+    flex: 1;
+    padding: 0 .5rem;
+  }
+
+  div:last-of-type {
+    flex: .5;
+    margin-top: -5px;
+    text-align: right;
+  }
+
+  a {
+    background-color: $accent;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px $light-font;
+    color: $light-bg-content;
+    padding: 5px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: $light-bg-content;
+    color: $accent;
+  }
+}
+
+/*************Product Tile styles*************/
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-tile {
+  background-color: $light-bg-content;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px $light-font;
+  color: $light-font;
+  flex: 0 1 25%;
+  margin: 1rem;
+  padding: 1rem;
+  position: relative;
+
+  h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    border: 1px solid $light-font;
+  }
+
+  p {
+    margin-top: .5rem;
+  }
+}
+
+.price {
+  color: $light-bg-content;
+  background-color:  $accent;
+  border-radius: 5px;
+  padding: .5rem;
+  width: 68px;
+}
+
+/************Pop Out Menu Styles*************/
+.pop-up {
+  color: $light-bg-content;
+  background-color: $accent;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px $light-font;
+  box-sizing: border-box;
+  display: none;
+  height: 55px;
+  position: absolute;
+  width: 220px;
+
+  a {
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: $light-bg-content;
+    display: inline-block;
+    font-weight: bold;
+    flex: 1;
+    margin: 18px 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    background-color: $accent;
+    color: $light-bg-content;
+    text-decoration: underline;
+  }
+}
+
+.pop-up::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid $accent;
+  top: -28px;
+  right: 10px;
+}
+
+.more {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.more i {
+  font-size: 2rem;
+}
+
+@import '_dark';
+@import '_responsive';
 

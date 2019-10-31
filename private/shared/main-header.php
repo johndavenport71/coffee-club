@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto|Satisfy&display=swap">
-    <link rel="preload" href="<?= url_for('/stylesheets/coffee-club.css'); ?>">
+    <link rel="preload" href="<?= url_for('/stylesheets/main.css'); ?>">
     <link rel="preload" href="<?= url_for('/public/images/hero-img.jpg'); ?>">
     <link rel="preload" href="<?= url_for('/public/images/tile-1.jpg'); ?>">
     <link rel="preload" href="<?= url_for('/public/images/tile-2.jpg'); ?>">
@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="<?= url_for('/js/jquery-3.4.1.min.js'); ?>"></script>
     <script src="<?= url_for('/js/scripts.js'); ?>"></script>
-    <link rel="stylesheet" href="<?= url_for('/stylesheets/coffee-club.css'); ?>">
+    <link rel="stylesheet" href="<?= url_for('/stylesheets/main.css'); ?>">
   </head>
 
   <body>
