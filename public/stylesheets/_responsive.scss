@@ -5,6 +5,31 @@
     .main-header p {
       width: 75%;
     }
+
+    nav {
+      position: absolute;
+      width: 100%;
+
+      a {
+        display: none;
+      }
+
+      .menu {
+        position: absolute;
+        right: 0;
+        top: 30%;
+
+        a {  
+          display: none;
+          margin: 1rem;
+          padding: .5rem 1rem;
+        }
+      }
+    }
+
+    #nav-toggle {
+      display: block;
+    }
   
     main {
       width: 100%;
@@ -19,35 +44,35 @@
     
     .tile {
       flex: 1;
+
+      h2 {
+        color: $accent;
+        font-size: 2.5rem;
+        margin: 1rem auto;
+      }
+
+      p {
+        color: $light-font;
+        line-height: 1.5rem;
+        margin: .5rem auto;
+      }
+
+      a {
+        color: $accent;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      img {
+        box-shadow: 0 0 3px $light-font;
+        margin: 1rem auto;
+      }
     }
   
     .large {
       flex: 1;
     }
     
-    .tile h2 {
-      color: $accent;
-      font-size: 2.5rem;
-      margin: 1rem auto;
-    }
-    
-    .tile p {
-      color: $light-font;
-      line-height: 1.5rem;
-      margin: .5rem auto;
-    }
-    
-    .tile a {
-      color: $accent;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    
-    .tile img {
-      box-shadow: 0 0 3px $light-font;
-      margin: 1rem auto;
-    }
-  
     form {
       width: 85%;
     }
@@ -68,31 +93,7 @@
   
   /************400 width*************/
   @media screen and (max-width: 450px) {
-    nav {
-      position: absolute;
-      width: 100%;
-    }
-  
-    nav a {
-      display: none;
-    }
-  
-    nav .login {
-      position: absolute;
-      right: 0;
-      top: 30%;
-    }
-  
-    .login a {  
-      display: none;
-      margin: 1rem;
-      padding: .5rem 1rem;
-    }
-  
-    #nav-toggle {
-      display: block;
-    }
-  
+    
     .main-header h1,
     .main-header p {
       margin: 0 auto;
@@ -116,13 +117,13 @@
       text-align: center;
       width: 95%;
     }
-  
-    .members h2 {
-      margin-top: 3rem;
-    }
-  
+    
     .members {
       padding-top: 5rem;
+
+      h2 {
+        margin-top: 3rem;
+      }
     }
   
     p.error {

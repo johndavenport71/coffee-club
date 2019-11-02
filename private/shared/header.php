@@ -17,10 +17,11 @@
   </head>
   <body>      
     <header class="member-header" role="banner">
-      <h1><a href="<?= url_for('index.php'); ?>" class="logo">Coffee Club</a></h1>
       <nav role="navigation">
-        <a href="<?= url_for('index.php') ?>" title="Home">Home</a>
-        <div class="login">
+        
+        <div class="menu">
+          <a href="<?= url_for('/index.php') ?>" title="Home">Home</a>
+          <a href="<?= url_for('/products.php') ?>">Products</a>
           <?php
             if($_SESSION['loggedIn']){
               echo '<a href="' . url_for('/members/index.php') . '" title="Dashboard">Dashboard</a>';

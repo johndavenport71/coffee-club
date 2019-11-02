@@ -33,6 +33,9 @@ $light-accent: #1BCFAE;
   }
 
   /************General Styles*************/
+  body {
+    background-image: url('../images/papyrus.png');
+  }
   a:hover {
     color: $accent;
     text-decoration: underline;
@@ -50,7 +53,7 @@ header {
   .main-header {
     background-color: $light-font;
     background: url(../images/hero-img.jpg) center/cover no-repeat fixed;
-    min-height: 600px;
+    min-height: 95vh;
 
     h1,
     p {
@@ -73,15 +76,16 @@ header {
       
   .cta {
     background-color: $accent;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 0 2px 3px $light-font;
     display: block;
     color: $dark-font;
     font-size: 2rem;    
     margin: 1rem auto;
     padding: 1rem;
+    text-align: center;
     text-decoration: none;
-    width: 150px;
+    width: 250px;
   }
   
   .cta:hover {
@@ -108,7 +112,6 @@ header {
 /************Navigation*************/
 nav {
   background-color: rgba(250, 242, 240, 0.7);
-  box-shadow: 0 2px 3px $light-font;
   padding: 1.5rem 3rem;
 
   a {
@@ -117,32 +120,16 @@ nav {
     text-decoration: none;
   }
 
-  .login {
+  .menu {
     float: right;
-    margin-top: -10px;
+    margin-top: -1.4rem;
 
     a {
-      border-radius: 5px;
-      box-shadow: 0 1px 3px $light-font;
       display: inline-block;
       margin: 0 1rem;
+      min-width: 80px;
       padding: .5rem 1rem;
       text-align: center;
-      min-width: 150px;
-    }
-
-    a:first-of-type {
-      background-color: $accent;
-      color: $light-bg-content;
-    }
-
-    a:first-of-type:hover {
-      background-color: $light-bg-content;
-      color: $accent;
-    }
-
-    a:last-of-type {
-      border: 1px solid $light-font;
     }
 
   }
@@ -169,7 +156,7 @@ main {
 
   .add {
     background-color: $accent;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 0 2px 3px $light-font;
     color: $light-bg-content;
     margin-top: 2.5rem;
@@ -193,7 +180,7 @@ main {
 
 .tile {
   background-color: $light-bg-content;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 2px 3px $light-font;
   flex: 1;
   padding: 0 .5rem;
@@ -254,7 +241,7 @@ main {
 
 .members .add {
   background-color: $accent;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 2px 3px $light-font;
   color: $light-bg-content;
   padding: .5rem;
@@ -285,7 +272,7 @@ main {
 
 form {
   background-color: $light-bg-content;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 2px 3px $light-font;
   margin: 1rem auto;
   padding: 2rem 2rem;
@@ -317,7 +304,7 @@ form {
   input[type="submit"] {
     background-color: $accent;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 0 3px 5px $light-font;
     font-size: 1.2rem;
     color: $light-bg-content;
@@ -411,7 +398,7 @@ div.members {
 
 .member-tile {
   background-color: rgba(250, 242, 240, 0.7);
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 2px 3px $light-font;
   display: flex;
   flex: 1 1 50%;
@@ -432,7 +419,7 @@ div.members {
 
   a {
     background-color: $accent;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 0 1px 3px $light-font;
     color: $light-bg-content;
     padding: 5px;
@@ -454,7 +441,7 @@ div.members {
 
 .product-tile {
   background-color: $light-bg-content;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 2px 3px $light-font;
   color: $light-font;
   flex: 0 1 25%;
@@ -480,7 +467,7 @@ div.members {
 .price {
   color: $light-bg-content;
   background-color:  $accent;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: .5rem;
   width: 68px;
 }
@@ -489,7 +476,7 @@ div.members {
 .pop-up {
   color: $light-bg-content;
   background-color: $accent;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 2px 3px $light-font;
   box-sizing: border-box;
   display: none;

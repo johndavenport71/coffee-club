@@ -2,6 +2,7 @@
 @media (prefers-color-scheme: dark) {
     body {
       background-color: $dark-bg-body;
+      background-image: url('../images/papyrus-dark.png');
       color: $dark-font;
     }
 
@@ -66,6 +67,5 @@
         color: $dark-font;
     }
     
-  
   }
   

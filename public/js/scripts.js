@@ -23,12 +23,12 @@ function toggleNav() {
     if($('nav').hasClass('open')) {
         $('nav').removeClass('open');
         $('nav').animate({'height':'48px'}, 250, function(){
-            $('.login a').css('display', 'none');
+            $('.menu a').css('display', 'none');
         });
     } else {
-        $('nav').animate({'height':'200px'}, 250);
+        $('nav').animate({'height':'325px'}, 250);
         $('nav').addClass('open');
-        $('.login a').css('display', 'block');
+        $('.menu a').css('display', 'block');
     }
 }//end toggleNav func
 

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Satisfy&display=swap");
-
+/* Font family definitions */
+/* Color variable definitions */
 /************Simple Browser Reset*************/
 * {
   -webkit-box-sizing: border-box;
@@ -20,6 +21,10 @@ h3 {
 }
 
 /************General Styles*************/
+body {
+  background-image: url("../images/papyrus.png");
+}
+
 a:hover {
   color: #11826d;
   text-decoration: underline;
@@ -36,7 +41,7 @@ header {
 .main-header {
   background-color: #25120b;
   background: url(../images/hero-img.jpg) center/cover no-repeat fixed;
-  min-height: 600px;
+  min-height: 95vh;
 }
 
 .main-header h1,
@@ -59,7 +64,7 @@ header {
 
 .cta {
   background-color: #11826d;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 2px 3px #25120b;
           box-shadow: 0 2px 3px #25120b;
   display: block;
@@ -67,8 +72,9 @@ header {
   font-size: 2rem;
   margin: 1rem auto;
   padding: 1rem;
+  text-align: center;
   text-decoration: none;
-  width: 150px;
+  width: 250px;
 }
 
 .cta:hover {
@@ -96,8 +102,6 @@ header {
 /************Navigation*************/
 nav {
   background-color: rgba(250, 242, 240, 0.7);
-  -webkit-box-shadow: 0 2px 3px #25120b;
-          box-shadow: 0 2px 3px #25120b;
   padding: 1.5rem 3rem;
 }
 
@@ -107,34 +111,17 @@ nav a {
   text-decoration: none;
 }
 
-nav .login {
+nav .menu {
   float: right;
-  margin-top: -10px;
+  margin-top: -1.4rem;
 }
 
-nav .login a {
-  border-radius: 5px;
-  -webkit-box-shadow: 0 1px 3px #25120b;
-          box-shadow: 0 1px 3px #25120b;
+nav .menu a {
   display: inline-block;
   margin: 0 1rem;
+  min-width: 80px;
   padding: .5rem 1rem;
   text-align: center;
-  min-width: 150px;
-}
-
-nav .login a:first-of-type {
-  background-color: #11826d;
-  color: #fff8f6;
-}
-
-nav .login a:first-of-type:hover {
-  background-color: #fff8f6;
-  color: #11826d;
-}
-
-nav .login a:last-of-type {
-  border: 1px solid #25120b;
 }
 
 #nav-toggle {
@@ -159,7 +146,7 @@ main {
 
 main .add {
   background-color: #11826d;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 2px 3px #25120b;
           box-shadow: 0 2px 3px #25120b;
   color: #fff8f6;
@@ -186,7 +173,7 @@ main .add:hover {
 
 .tile {
   background-color: #fff8f6;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 2px 3px #25120b;
           box-shadow: 0 2px 3px #25120b;
   -webkit-box-flex: 1;
@@ -252,7 +239,7 @@ main .add:hover {
 
 .members .add {
   background-color: #11826d;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 2px 3px #25120b;
           box-shadow: 0 2px 3px #25120b;
   color: #fff8f6;
@@ -284,7 +271,7 @@ main .add:hover {
 
 form {
   background-color: #fff8f6;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 2px 3px #25120b;
           box-shadow: 0 2px 3px #25120b;
   margin: 1rem auto;
@@ -318,7 +305,7 @@ form input:not([type="submit"]):focus {
 form input[type="submit"] {
   background-color: #11826d;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 3px 5px #25120b;
           box-shadow: 0 3px 5px #25120b;
   font-size: 1.2rem;
@@ -422,7 +409,7 @@ div.members {
 
 .member-tile {
   background-color: rgba(250, 242, 240, 0.7);
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 2px 3px #25120b;
           box-shadow: 0 2px 3px #25120b;
   display: -webkit-box;
@@ -453,7 +440,7 @@ div.members {
 
 .member-tile a {
   background-color: #11826d;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 1px 3px #25120b;
           box-shadow: 0 1px 3px #25120b;
   color: #fff8f6;
@@ -479,7 +466,7 @@ div.members {
 
 .product-tile {
   background-color: #fff8f6;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 2px 3px #25120b;
           box-shadow: 0 2px 3px #25120b;
   color: #25120b;
@@ -508,7 +495,7 @@ div.members {
 .price {
   color: #fff8f6;
   background-color: #11826d;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: .5rem;
   width: 68px;
 }
@@ -517,7 +504,7 @@ div.members {
 .pop-up {
   color: #fff8f6;
   background-color: #11826d;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 2px 3px #25120b;
           box-shadow: 0 2px 3px #25120b;
   -webkit-box-sizing: border-box;
@@ -577,6 +564,7 @@ div.members {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1f1816;
+    background-image: url("../images/papyrus-dark.png");
     color: #fff8f6;
   }
   p {
@@ -635,6 +623,26 @@ div.members {
   .main-header p {
     width: 75%;
   }
+  nav {
+    position: absolute;
+    width: 100%;
+  }
+  nav a {
+    display: none;
+  }
+  nav .menu {
+    position: absolute;
+    right: 0;
+    top: 30%;
+  }
+  nav .menu a {
+    display: none;
+    margin: 1rem;
+    padding: .5rem 1rem;
+  }
+  #nav-toggle {
+    display: block;
+  }
   main {
     width: 100%;
   }
@@ -648,11 +656,6 @@ div.members {
     width: 100%;
   }
   .tile {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-  .large {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -677,6 +680,11 @@ div.members {
             box-shadow: 0 0 3px #25120b;
     margin: 1rem auto;
   }
+  .large {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
   form {
     width: 85%;
   }
@@ -693,26 +701,6 @@ div.members {
 
 /************400 width*************/
 @media screen and (max-width: 450px) {
-  nav {
-    position: absolute;
-    width: 100%;
-  }
-  nav a {
-    display: none;
-  }
-  nav .login {
-    position: absolute;
-    right: 0;
-    top: 30%;
-  }
-  .login a {
-    display: none;
-    margin: 1rem;
-    padding: .5rem 1rem;
-  }
-  #nav-toggle {
-    display: block;
-  }
   .main-header h1,
   .main-header p {
     margin: 0 auto;
@@ -732,11 +720,11 @@ div.members {
     text-align: center;
     width: 95%;
   }
-  .members h2 {
-    margin-top: 3rem;
-  }
   .members {
     padding-top: 5rem;
+  }
+  .members h2 {
+    margin-top: 3rem;
   }
   p.error {
     padding: 0;
