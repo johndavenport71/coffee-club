@@ -1,5 +1,6 @@
 <?php 
   require_once('../../private/initialize.php'); 
+  is_user_logged_in();
   $id = $_GET['id'] ?? '1'; // PHP > 7.0
   
   $member = getMember($conn, $id);

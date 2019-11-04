@@ -1,6 +1,6 @@
 <?php 
   require_once('../../private/initialize.php'); 
-  
+  is_user_logged_in();
   $results = getMembers($conn);
 
   $page_title = 'Members Area - Coffee Club';

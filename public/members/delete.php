@@ -1,6 +1,7 @@
 <?php 
   require_once('../../private/initialize.php');
-
+  is_user_logged_in();
+  
   if(is_post_request()) {
     $id = (int)h($_POST['memberID']);
 

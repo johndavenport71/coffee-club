@@ -38,4 +38,10 @@ function is_get_request() {
   return $_SERVER['REQUEST_METHOD'] == 'GET';
 }
 
+function is_user_logged_in() {
+  if(!$_SESSION['match']) {
+    header('Location: ' . url_for('/login.php'));
+  }
+}
+
 ?>
