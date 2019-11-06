@@ -28,23 +28,31 @@
 
   <body>
     <header class="main-header" role="banner">
-        <nav role="navigation">
-            <div class="menu">
-              <a href="index.php" title="Home">Home</a>
-              <a href="<?= url_for('/products.php') ?>">Products</a>
-              <?php
-                if($_SESSION['loggedIn']){
-                  echo '<a href="' . url_for('/members/index.php') . '" title="Dashboard">Dashboard</a>';
-                  echo '<a href="' . url_for('/log-out.php') . '" title="Log Out">Log Out</a>';
-                } else {
-                  echo '<a href="' . url_for('/sign-up.php') . '" title="Sign Up">Sign Up</a>';
-                  echo '<a href="' . url_for('/login.php') . '" title="Login">Login</a>';
-                }
-              ?>
-            </div>
-            <i class="material-icons" id="nav-toggle">menu</i>
-        </nav>
-        <h1>Coffee Club</h1>
-        <p>Your neighborhood coffee supplier</p>
-        <a href="<?= url_for('/sign-up.php'); ?>" class="cta">Sign Up!</a>
+      <?php
+        if(isset($_SESSION['user']) && isset($_SESSION['match'])) {
+          $msg = '<div class="hello">Hi there, ';
+          $msg .= $_SESSION['user'];
+          $msg .= '!</div>';
+          echo $msg;
+        }
+      ?>
+      <nav role="navigation">
+          <div class="menu">
+            <a href="index.php" title="Home">Home</a>
+            <a href="<?= url_for('/products.php') ?>">Products</a>
+            <?php
+              if($_SESSION['loggedIn']){
+                echo '<a href="' . url_for('/members/index.php') . '" title="Dashboard">Dashboard</a>';
+                echo '<a href="' . url_for('/log-out.php') . '" title="Log Out">Log Out</a>';
+              } else {
+                echo '<a href="' . url_for('/sign-up.php') . '" title="Sign Up">Sign Up</a>';
+                echo '<a href="' . url_for('/login.php') . '" title="Login">Login</a>';
+              }
+            ?>
+          </div>
+          <i class="material-icons" id="nav-toggle">menu</i>
+      </nav>
+      <h1>Coffee Club</h1>
+      <p>Your neighborhood coffee supplier</p>
+      <a href="<?= url_for('/sign-up.php'); ?>" class="cta">Sign Up!</a>
     </header>

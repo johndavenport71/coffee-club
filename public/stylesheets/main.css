@@ -38,6 +38,15 @@ header {
   color: #1f1816;
 }
 
+header .hello {
+  color: #25120b;
+  font-size: 1.25rem;
+  font-weight: 600;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
 .main-header {
   background-color: #25120b;
   background: url(../images/hero-img.jpg) center/cover no-repeat fixed;
@@ -580,6 +589,9 @@ div.members {
   .login a:last-of-type {
     border: 1px solid #25120b;
     background-color: rgba(58, 50, 48, 0.7);
+  }
+  header .hello {
+    color: #fff8f6;
   }
   header h1 .logo {
     color: #fff8f6;

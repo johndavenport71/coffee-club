@@ -6,19 +6,14 @@
     $email = h($_POST['email']);
     $pass = h($_POST['pass']);
 
-    $sql = "SELECT email, pass_hash, pass_salt FROM members";
-    $results = $conn->query($sql);
-
-    while($row = $results->fetch()) {
-        if($row['email'] == $email) {
-            $checkMe = $row['pass_salt'] . $pass;
-            if(password_verify($checkMe, $row['pass_hash'])) {
-                $_SESSION['match'] = true;
-                $_SESSION['loggedIn'] = true;
-                break;
-            }           
-        }
-    }
+    $results = getMemberByEmail($conn, $email);
+    $checkMe = $results['pass_salt'] . $pass;
+    if(password_verify($checkMe, $results['pass_hash'])) {
+        $_SESSION['member_level'] = $results['member_level'] ?? 'm';
+        $_SESSION['user'] = $results['first_name'] ?? '';
+        $_SESSION['match'] = true;
+        $_SESSION['loggedIn'] = true;
+    }           
     
     if($_SESSION['match']) {
         header('Location: ' .  url_for('/members/index.php'));

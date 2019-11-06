@@ -23,6 +23,10 @@
       border: 1px solid $light-font;
       background-color: rgba(58, 50, 48, 0.7);
     }
+
+    header .hello {
+      color: $dark-font;
+    }
     
     header h1 .logo {
       color: $dark-font;

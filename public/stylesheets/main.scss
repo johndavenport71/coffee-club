@@ -48,6 +48,16 @@ header {
     border-top: 5px solid $accent;
     box-shadow: 0 2px 3px #302825;
     color: $dark-bg-body;
+
+    .hello {
+      color: $light-font;
+      font-size: 1.25rem;
+      font-weight: 600;
+      position: absolute;
+
+      top: 1rem;
+      left: 1rem;
+    }
   }
   
   .main-header {

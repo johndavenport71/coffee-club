@@ -17,8 +17,15 @@
   </head>
   <body>      
     <header class="member-header" role="banner">
+      <?php
+        if(isset($_SESSION['user']) && isset($_SESSION['match'])) {
+          $msg = '<div class="hello">Hi there, ';
+          $msg .= $_SESSION['user'];
+          $msg .= '!</div>';
+          echo $msg;
+        }
+      ?>
       <nav role="navigation">
-        
         <div class="menu">
           <a href="<?= url_for('/index.php') ?>" title="Home">Home</a>
           <a href="<?= url_for('/products.php') ?>">Products</a>
