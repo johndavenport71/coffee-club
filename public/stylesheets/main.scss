@@ -35,6 +35,7 @@ $light-accent: #1BCFAE;
   /************General Styles*************/
   body {
     background-image: url('../images/papyrus.png');
+    background-attachment: fixed;
   }
   a:hover {
     color: $accent;
@@ -179,6 +180,7 @@ main {
     background-color: $light-bg-content;
     color: $accent;
   }
+
 }
 
 .flex {
@@ -327,6 +329,12 @@ form {
     background-color: #E5FFF9;
     color: $accent;
     cursor: pointer;
+  }
+
+  .tip {
+    font-size: .8rem;
+    margin-bottom: 1rem;
+    margin-top: -10px;
   }
 }
 

@@ -20,16 +20,18 @@
         <br>
         
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><i class="material-icons icon"></i>
+        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><i class="material-icons icon"></i>
         <br>
 
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required><i class="material-icons icon"></i>
+        <input type="tel" id="phone" name="phone" onchange="this.value=phoneMask(this.value);" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><i class="material-icons icon"></i>
         <br>
 
         <label for="pass">Password:</label>
-        <input type="password" id="pass" name="pass" required><i class="material-icons icon"></i>
+        <input type="password" id="pass" name="pass" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"><i class="material-icons icon"></i>
         <br>
+        <p class="tip">Your password should be at least 8 characters long and contain and least one of each of the following: Uppercase letter, Lowercase letter, Number, Symbol</p>
+        
 
         <input type="submit" value="Register">
     </form>

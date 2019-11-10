@@ -23,6 +23,7 @@ h3 {
 /************General Styles*************/
 body {
   background-image: url("../images/papyrus.png");
+  background-attachment: fixed;
 }
 
 a:hover {
@@ -328,6 +329,12 @@ form input[type="submit"]:hover {
   background-color: #E5FFF9;
   color: #11826d;
   cursor: pointer;
+}
+
+form .tip {
+  font-size: .8rem;
+  margin-bottom: 1rem;
+  margin-top: -10px;
 }
 
 .icon {
@@ -657,6 +664,9 @@ div.members {
   }
   main {
     width: 100%;
+  }
+  main h2 {
+    margin-top: 2.5rem;
   }
   .flex {
     display: -webkit-box;

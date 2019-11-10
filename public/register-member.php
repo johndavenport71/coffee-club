@@ -6,6 +6,8 @@
         $lname = h($_POST['lname']) ?? '';
         $email = h($_POST['email']) ?? '';
         $phone = h($_POST['phone']) ?? '';
+        //remove any dashes from the phone number
+        $phone = str_replace('-', '', $phone);
         $pass = h($_POST['pass']) ?? '';
         $salt = bin2hex(random_bytes(32));
         $newPass = $salt . $pass;
