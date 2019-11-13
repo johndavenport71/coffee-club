@@ -3,3 +3,4 @@ db-connect.php
 pop-members.sql
 db-structure.png
 todo.txt
+env.php
