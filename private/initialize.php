@@ -23,6 +23,7 @@
   require_once('functions.php');
   //include('members.php');
   include('db-connect.php');
+  include('env.php');
 
   $_SESSION['loggedIn'] = $_SESSION['loggedIn'] ?? false;
 ?>

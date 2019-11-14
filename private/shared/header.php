@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<?= url_for('/stylesheets/main.css'); ?>">
     <script src="<?= url_for('/js/jquery-3.4.1.min.js'); ?>"></script>
     <script src="<?= url_for('/js/scripts.js'); ?>"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>      
     <header class="member-header" role="banner">

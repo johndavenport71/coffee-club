@@ -8,6 +8,12 @@
     $email = '';
 ?>
 
+<script type="text/javascript">
+    function getResponse() {
+        console.log('message?')
+    }
+</script>
+
 <main class="sign-up new" role="main">
     <h2>New Member Sign Up</h2>
     <form action="register-member.php" method="POST">
@@ -32,7 +38,7 @@
         <br>
         <p class="tip">Your password should be at least 8 characters long and contain and least one of each of the following: Uppercase letter, Lowercase letter, Number, Symbol</p>
         
-
+        <div class="g-recaptcha" data-sitekey="6Le2xsIUAAAAANM_sfdq96-8_gOGcYnoidHx49F8"></div>
         <input type="submit" value="Register">
     </form>
 
