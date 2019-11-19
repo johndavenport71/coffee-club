@@ -7,8 +7,7 @@
         $lname = h($_POST['lname']) ?? '';
         $email = h($_POST['email']) ?? '';
         $phone = h($_POST['phone']) ?? '';
-        //remove any dashes from the phone number
-        $phone = str_replace('-', '', $phone);
+        
 
         $captcha = $_POST['g-recaptcha-response'] ?? '';
         if(!$captcha){
@@ -19,7 +18,6 @@
             $url .= '&phone=' . $phone;
             header('Location: ' . $url );
         }
-        // $secretKey = "6Le2xsIUAAAAABRnUylzN_X15UwAs1Fe6jogV_rx";
         $ip = $_SERVER['REMOTE_ADDR'];
         // post request to server
         $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode(SECRET_KEY) .  '&response=' . urlencode($captcha);
@@ -28,7 +26,8 @@
         
         // Captcha Success
         if($responseKeys["success"]) {
-            
+            //remove any dashes from the phone number
+            $phone = str_replace('-', '', $phone);
             $pass = h($_POST['pass']) ?? '';
             $salt = bin2hex(random_bytes(32));
             $newPass = $salt . $pass;
