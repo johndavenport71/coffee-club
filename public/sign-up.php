@@ -44,7 +44,7 @@
         <?php if($error) {echo $error . '<br>';} ?>
         <input type="submit" value="Register">
     </form>
-
+    <a href="reset-password.php">Forgot your password?</a>
 </main>
 
 <?php include(SHARED_PATH . '/footer.php');
