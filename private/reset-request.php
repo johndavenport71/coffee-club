@@ -21,6 +21,7 @@ if(isset($_POST["email"])) {
         $sql->execute();
     } catch(PDOException $e) {
         header('Location: ' . url_for('errors/500-error.php'));
+        die();
     }
 
     $hashedToken = password_hash($token, PASSWORD_DEFAULT);
@@ -38,6 +39,7 @@ if(isset($_POST["email"])) {
         $sql->execute();
     } catch(PDOException $e) {
         header('Location: ' . url_for('errors/500-error.php'));
+        die();   
     }
 
     //destroy database connection

@@ -11,6 +11,10 @@
             $_SESSION['loginAttempt'] = false;
         }
     }
+    if($_GET['pwd'] == 'reset') {
+        echo '<script>alert("Password successfully reset.");</script>';
+    }
+
 ?>
 
 <main class="sign-up" role="main">
