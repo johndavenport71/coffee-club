@@ -26,6 +26,7 @@
         <input type="password" id="pass" name="pass" required><br>
         <input type="submit" value="login">
     </form>
+    <a href="reset-password.php">Forgot your password?</a>
 </main>
 
 <?php include(SHARED_PATH . '/footer.php'); ?>

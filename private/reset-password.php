@@ -69,7 +69,7 @@ if(isset($_POST["password-reset-request"])) {
             header('Location: ' . url_for('errors/500-error.php'));
             die();
         }
-        header("Location: " . PUBLIC_PATH . '/login.php?pwd=reset');
+        header("Location: " . url_for('/login.php?pwd=reset'));
     }
     
 } else {

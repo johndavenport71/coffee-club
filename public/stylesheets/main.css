@@ -10,7 +10,8 @@
 }
 
 body,
-p {
+p,
+a {
   font-family: "Roboto", sans-serif;
 }
 
@@ -24,6 +25,11 @@ h3 {
 body {
   background-image: url("../images/papyrus.png");
   background-attachment: fixed;
+}
+
+a {
+  color: #25120b;
+  text-decoration: none;
 }
 
 a:hover {
@@ -582,6 +588,10 @@ div.members {
     background-color: #1f1816;
     background-image: url("../images/papyrus-dark.png");
     color: #fff8f6;
+  }
+  a {
+    color: #fff8f6;
+    text-decoration: none;
   }
   p {
     line-height: 1.7rem;

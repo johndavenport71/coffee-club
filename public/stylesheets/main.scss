@@ -16,33 +16,40 @@ $light-accent: #1BCFAE;
 
 /************Simple Browser Reset*************/
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body,
-  p {
-    font-family: $p-fonts;
-  }
-  
-  h1,
-  h2,
-  h3 {
-    font-family: $h-fonts; 
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  /************General Styles*************/
-  body {
-    background-image: url('../images/papyrus.png');
-    background-attachment: fixed;
-  }
-  a:hover {
-    color: $accent;
-    text-decoration: underline;
-  }
-  
-  
+body,
+p,
+a {
+  font-family: $p-fonts;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $h-fonts; 
+}
+
+/************General Styles*************/
+body {
+  background-image: url('../images/papyrus.png');
+  background-attachment: fixed;
+}
+
+a {
+  color: $light-font;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $accent;
+  text-decoration: underline;
+}
+
+
 
 /************Main Header Styles*************/
 header {
